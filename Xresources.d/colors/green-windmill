@@ -1,0 +1,38 @@
+
+
+!green-windmill 
+
+*background: #141414
+*foreground: #aaaaaa
+
+!black
+*color0: #BEA16D
+*color8: #FFF5D0
+
+!red
+*color1: #DA6639
+*color9: #FF895C
+
+!green
+*color2 : #8ABB5D
+*color10: #A5BE7B
+
+!yellow
+*color3:  #C5D26B
+*color11: #A6AC3F
+
+!blue
+*color4: #839D3C
+*color12: #B0CE48
+
+!magenta
+*color5: #9F7450
+*color13: #C28A61
+
+!cyan
+*color6: #667543
+*color14: #99A46E
+
+!white
+*color7: #A9CCB0
+*color15: #C6E5D0
