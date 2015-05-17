@@ -1,4 +1,5 @@
 
+#include "Xresources.d/rxvt-unicode"
 #include "Xresources.d/xterm"
 
 ! Uncomment the color scheme you wish to use !
@@ -26,19 +27,6 @@ Xft.lcdfilter: lcdfilter
 !*boldFont: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
 !*font: xft:OhSnap:pixelsize=12:antialias=false:hinting=true
 !*boldFont: xft:OhSnap:pixelsize=12:antialias=false:hinting=true
-
-URxvt*title: terminal
-URxvt*geometry: 88x40
-URxvt*termName:rxvt-unicode
-URxvt*transparent: false
-URxvt*depth: 32
-URxvt*shading: 0
-URxvt*saveLines: 12000
-URxvt*scrollBar: false
-URxvt*scrollBar_right: false
-URxvt*borderLess: false
-URxvt*.urlLauncher: firefox
-
 
 
 
