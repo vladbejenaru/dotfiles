@@ -4,7 +4,8 @@
 
 ! Uncomment the color scheme you wish to use !
 
-#include "Xresources.d/colors/brown-snail"
+!#include "Xresources.d/colors/beige-balcony"
+#include "Xresources.d/colors/cumin"
 !#include "Xresources.d/colors/green-windmill"
 
 Xft.dpi: 96
