@@ -1,0 +1,34 @@
+
+#include "Xresources.d/rxvt-unicode"
+#include "Xresources.d/xterm"
+
+! Uncomment the color scheme you wish to use !
+
+!#include "Xresources.d/colors/beige-balcony"
+#include "Xresources.d/colors/cumin"
+!#include "Xresources.d/colors/green-windmill"
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcdfilter
+
+*fading:                  0
+*fadeColor:               #002b36
+*cursorColor:             #93a1a1
+*pointerColorBackground:  #586e75
+*pointerColorForeground:  #93a1a1
+
+*font: xft:Ubuntu Mono derivative Powerline:pixelsize=12:antialias=true:hinting=true
+*boldFont: xft:Ubuntu Mono derivative Powerline:pixelsize=12:antialias=true:hinting=true
+!*font: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
+!*boldFont: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
+!*font: xft:OhSnap:pixelsize=12:antialias=false:hinting=true
+!*boldFont: xft:OhSnap:pixelsize=12:antialias=false:hinting=true
+
+
+
+
