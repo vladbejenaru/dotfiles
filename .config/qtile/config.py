@@ -124,18 +124,18 @@ keys = [
         lazy.spawn("geany")
         ),
     
-    # Command Line Apps
+    # Terminal Apps
     Key(
         [mod], "KP_Insert",                                  # Keypad 0
         lazy.spawncmd()                                      # Run Dialog
         ),
     Key(
         [mod], "KP_End",                                     # Keypad 1
-        lazy.spawn(myTerm+" -e irssi")
+        lazy.spawn(myTerm+" -e ranger")
         ),
     Key(
         [mod], "KP_Down",                                    # Keypad 2
-        lazy.spawn(myTerm+" -e canto -u")
+        lazy.spawn(myTerm+" -e ncmpcpp")
         ),
     Key(
         [mod], "KP_Page_Down",                               # Keypad 3
@@ -143,28 +143,42 @@ keys = [
         ), 
     Key(
         [mod], "KP_Left",                                    # Keypad 4
-        lazy.spawn(myTerm+" -e ncmpcpp")
+        lazy.spawn(myTerm+" -e lynx http://www.omgubuntu.co.uk")
         ),
     Key(
         [mod], "KP_Begin",                                   # Keypad 5
-        lazy.spawn(myTerm+" -e lynx http://www.omgubuntu.co.uk")
+        lazy.spawn(myTerm+" -e irssi")
         ), 
     Key(
         [mod], "KP_Right",                                   # Keypad 6
-        lazy.spawn(myTerm+" -e /home/derek/colortest.sh") 
+        lazy.spawn(myTerm+" -e canto -u")
         ),
     Key(
         [mod], "KP_Home",                                    # Keypad 7
-        lazy.spawn(myTerm+" -e vim "+myConfig)
+        lazy.spawn(myTerm+" -e mutt")
         ),
     Key(
         [mod], "KP_Up",                                      # Keypad 8
-        lazy.spawn(myTerm+" -e /home/derek/pipes2")
+        lazy.spawn(myTerm+" -e calcurse")
         ),
     Key(
         [mod], "KP_Page_Up",                                 # Keypad 9
-        lazy.spawn(myTerm+" -e ranger")
+        lazy.spawn(myTerm+" -e vim "+myConfig)
         ),
+        
+    # Color Testing Scripts
+    Key(
+        [mod, "shift"], "KP_End",                            # Keypad 1
+        lazy.spawn(myTerm+" -e /home/derek/scripts/colors/colortest.sh")
+        ),
+    Key(
+        [mod, "shift"], "KP_Down",                           # Keypad 2
+        lazy.spawn(myTerm+" -e /home/derek/scripts/colors/dna.sh")
+        ),
+    Key(
+        [mod, "shift"], "KP_Page_Down",                      # Keypad 3
+        lazy.spawn(myTerm+" -e /home/derek/scripts/colors/pipes2") 
+        ), 
 ]
 
 ##### COLORS #####
@@ -270,28 +284,44 @@ screens = [
                                  padding_y = 6, 
                                  padding_x = 3, 
                                  ),
-               widget.TextBox(text=" ☵", 
-		                      foreground=colors[3], 
-                              background=colors[1],
-		                      fontsize=14
-		                      ),
-               widget.CurrentLayout(foreground = colors[6], 
-                                    background = colors[1],
-                                    padding = 6,
-                                    ),
+               widget.Sep(linewidth = 0,
+                          padding = 10,
+                          foreground = colors[6], 
+                          background = colors[1]
+                          ),
                widget.TextBox(text=" ↯", 
                               foreground=colors[3], 
                               background=colors[1],
+                              padding = 0,
                               fontsize=14
                               ),
                widget.Net(interface = "eth0", 
                           foreground = colors[6], 
                           background = colors[1]
                           ),
+               widget.TextBox(text=" ", 
+                              foreground=colors[3], 
+                              background=colors[1],
+                              padding = 6,
+                              fontsize=14
+                              ),
+               widget.Updates(foreground=colors[6], 
+                              background=colors[1],
+		                      fontsize=9
+		                      ),
+               widget.TextBox(text=" ☵", 
+                              padding = 6,
+		                      foreground=colors[3], 
+                              background=colors[1],
+		                      fontsize=14
+		                      ),
+               widget.CurrentLayout(foreground = colors[6], 
+                                    background = colors[1]
+                                    ),
                widget.TextBox(text=" ⌚", 
                               foreground=colors[3],
                               background=colors[1], 
-                              padding = 3,
+                              padding = 6,
                               fontsize=18
                               ),
                widget.Clock(foreground = colors[6], 
@@ -300,7 +330,7 @@ screens = [
                             ),
                widget.Sep(linewidth = 0,
                           padding = 6,
-                          foreground = colors[8], 
+                          foreground = colors[6], 
                           background = colors[1]
                           ),
             ],
@@ -332,41 +362,50 @@ screens = [
                              foreground = colors[8], 
                              background=colors[1]
                              ),
-               widget.Sep(linewidth = 0,
-                          padding = 12,
-                          foreground = colors[2], 
-                          background = colors[1]
-                          ),
                widget.WindowName(foreground = colors[3], 
                                  background = colors[1],
-                                 padding_y = 6, 
-                                 padding_x = 3, 
+                                 padding = 10
                                  ),
-               widget.Systray(
-                              background=colors[1]
+               widget.Systray(background=colors[1]
                               ),
-               widget.TextBox(text=" ☵", 
-		                      foreground=colors[3], 
-                              background=colors[1],
-		                      fontsize=14
-		                      ),
-               widget.CurrentLayout(foreground = colors[6], 
-                                    background = colors[1],
-                                    padding = 6,
-                                    ),
+               widget.Sep(linewidth = 0,
+                          padding = 10,
+                          foreground = colors[6], 
+                          background = colors[1]
+                          ),
                widget.TextBox(text=" ↯", 
                               foreground=colors[3], 
                               background=colors[1],
+                              padding = 0,
                               fontsize=14
                               ),
                widget.Net(interface = "eth0", 
                           foreground = colors[6], 
                           background = colors[1]
                           ),
+               widget.TextBox(text=" ", 
+                              foreground=colors[3], 
+                              background=colors[1],
+                              padding = 6,
+                              fontsize=14
+                              ),
+               widget.Updates(foreground=colors[6], 
+                              background=colors[1],
+		                      fontsize=9
+		                      ),
+               widget.TextBox(text=" ☵", 
+                              padding = 6,
+		                      foreground=colors[3], 
+                              background=colors[1],
+		                      fontsize=14
+		                      ),
+               widget.CurrentLayout(foreground = colors[6], 
+                                    background = colors[1]
+                                    ),
                widget.TextBox(text=" ⌚", 
                               foreground=colors[3],
                               background=colors[1], 
-                              padding = 3,
+                              padding = 6,
                               fontsize=18
                               ),
                widget.Clock(foreground = colors[6], 
@@ -411,28 +450,44 @@ screens = [
                                  padding_y = 6, 
                                  padding_x = 3, 
                                  ),
-               widget.TextBox(text=" ☵", 
-		                      foreground=colors[3], 
-                              background=colors[1],
-		                      fontsize=14
-		                      ),
-               widget.CurrentLayout(foreground = colors[6], 
-                                    background = colors[1],
-                                    padding = 6,
-                                    ),
+               widget.Sep(linewidth = 0,
+                          padding = 10,
+                          foreground = colors[6], 
+                          background = colors[1]
+                          ),
                widget.TextBox(text=" ↯", 
                               foreground=colors[3], 
                               background=colors[1],
+                              padding = 0,
                               fontsize=14
                               ),
                widget.Net(interface = "eth0", 
                           foreground = colors[6], 
                           background = colors[1]
                           ),
+               widget.TextBox(text=" ", 
+                              foreground=colors[3], 
+                              background=colors[1],
+                              padding = 6,
+                              fontsize=14
+                              ),
+               widget.Updates(foreground=colors[6], 
+                              background=colors[1],
+		                      fontsize=9
+		                      ),
+               widget.TextBox(text=" ☵", 
+                              padding = 6,
+		                      foreground=colors[3], 
+                              background=colors[1],
+		                      fontsize=14
+		                      ),
+               widget.CurrentLayout(foreground = colors[6], 
+                                    background = colors[1]
+                                    ),
                widget.TextBox(text=" ⌚", 
                               foreground=colors[3],
                               background=colors[1], 
-                              padding = 3,
+                              padding = 6,
                               fontsize=18
                               ),
                widget.Clock(foreground = colors[6], 
@@ -485,6 +540,7 @@ def execute_once(process):
 
 @hook.subscribe.startup
 def startup():
+    execute_once("xrdb ~/.Xresources")
     execute_once("compton --config /home/derek/.config/compton/compton.conf")
     execute_once("xscreensaver -nosplash")
     execute_once("nitrogen --restore")
