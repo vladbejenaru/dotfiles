@@ -22,13 +22,12 @@ Xft.lcdfilter: lcdfilter
 *pointerColorBackground:  #586e75
 *pointerColorForeground:  #93a1a1
 
-*font: xft:Ubuntu Mono derivative Powerline:pixelsize=12:antialias=true:hinting=true
-*boldFont: xft:Ubuntu Mono derivative Powerline:pixelsize=12:antialias=true:hinting=true
+*font: xft:Ubuntu\ Mono:pixelsize=12:antialias=true:hinting=true
+*boldFont: xft:Ubuntu\ Mono:pixelsize=12:antialias=true:hinting=true
 !*font: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
 !*boldFont: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
 !*font: xft:OhSnap:pixelsize=12:antialias=false:hinting=true
 !*boldFont: xft:OhSnap:pixelsize=12:antialias=false:hinting=true
-
 
 
 
