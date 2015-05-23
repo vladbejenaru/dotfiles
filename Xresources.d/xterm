@@ -1,8 +1,8 @@
 
-UXTerm*faceName: Ubuntu Mono derivative Powerline
+UXTerm*faceName: Ubuntu\ Mono
 UXTerm*faceSize: 10
-UXTerm*font: Ubuntu Mono derivative Powerline
-UXTerm*boldFont: Ubuntu Mono derivative Powerline
+UXTerm*font: Ubuntu\ Mono
+UXTerm*boldFont: Ubuntu\ Mono
 UXTerm*loginShell: true
 UXTerm*vt100*geometry: 99x28
 UXTerm*saveLines: 2000
