@@ -1,13 +1,4 @@
 
-#include "Xresources.d/rxvt-unicode"
-#include "Xresources.d/xterm"
-
-! Uncomment the color scheme you wish to use !
-
-!#include "Xresources.d/colors/beige-balcony"
-#include "Xresources.d/colors/cumin"
-!#include "Xresources.d/colors/green-windmill"
-
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -29,5 +20,36 @@ Xft.lcdfilter: lcdfilter
 !*font: xft:OhSnap:pixelsize=12:antialias=false:hinting=true
 !*boldFont: xft:OhSnap:pixelsize=12:antialias=false:hinting=true
 
+URxvt*title: terminal
+URxvt*geometry: 88x40
+URxvt*termName:rxvt-unicode
+URxvt*transparent: false
+URxvt*depth: 32
+URxvt*shading: 0
+URxvt*saveLines: 2000
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*borderLess: false
+URxvt*.urlLauncher: firefox
 
+!!!! Cumin !!!!
 
+URxvt*background:#170f0d
+URxvt*foreground:#746c48
+
+URxvt*color0: #464F2D
+URxvt*color1: #5C6548
+URxvt*color2: #5D5A39
+URxvt*color3: #827D4D
+URxvt*color4: #57403E
+URxvt*color5: #665453
+URxvt*color6: #6E5450
+URxvt*color7: #8E7266
+URxvt*color8: #906756
+URxvt*color9: #927E7E
+URxvt*color10: #AD6042
+URxvt*color11: #B48B6F
+URxvt*color12: #C4AB98
+URxvt*color13: #D9C9B6
+URxvt*color14: #E7DDD1
+URxvt*color15: #FAF7F2
