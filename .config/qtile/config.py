@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # A customized config.py for Qtile window manager (http://www.qtile.org)     
-# Modified by Derek Taylor (http://www.github.com/USER/ )
+# Modified by Derek Taylor (http://www.github.com/dwt1/ )
 #
 # The following comments are the copyright and licensing information from the default config.
 # Copyright (c) 2010 Aldo Cortesi, 2010, 2014 dequis, 2012 Randall Ma, 2012-2014 Tycho Andersen, 
@@ -215,7 +215,7 @@ def init_colors():
 ##### GROUPS #####
     
 def init_group_names():
-	return [("ONE", {'layout': 'max'}),
+    return [("ONE", {'layout': 'max'}),
             ("TWO", {'layout': 'max'}),
             ("THREE", {'layout': 'monadtall'}),
             ("FOUR", {'layout': 'monadtall'}),
@@ -229,7 +229,7 @@ def init_groups():
 ##### LAYOUTS #####
 
 def init_floating_layout():
-    return layout.Floating(border_focus="#67742B")
+    return layout.Floating(border_focus="#3B4022")
     
 def init_layout_theme():
     return {"border_width": 2,
@@ -239,28 +239,27 @@ def init_layout_theme():
 		    }
 
 def init_layouts():
-    return [
-            layout.Max(**layout_theme),
+    return [layout.Max(**layout_theme),
             layout.MonadTall(**layout_theme),
-            layout.TreeTab(font = "MintsStrong",
-                       fontsize = 8, 
-                       sections = ["FIRST", "SECOND"],
-                       section_fontsize = 8, 
-                       bg_color = "141414", 
-                       active_bg = "90C435", 
-                       active_fg = "000000", 
-                       inactive_bg = "384323", 
-                       inactive_fg = "a0a0a0", 
-                       padding_y = 5,
-                       section_top = 10,
-                       **layout_theme
-                       ),
+            layout.TreeTab(
+                font = "MintsStrong",
+                fontsize = 8, 
+                sections = ["FIRST", "SECOND"],
+                section_fontsize = 8, 
+                bg_color = "141414", 
+                active_bg = "90C435", 
+                active_fg = "000000", 
+                inactive_bg = "384323", 
+                inactive_fg = "a0a0a0", 
+                padding_y = 5,
+                section_top = 10,
+                **layout_theme
+                ),
             layout.Tile(shift_windows=True, **layout_theme),
             layout.RatioTile(**layout_theme),
             layout.Stack(stacks=2, **layout_theme),
             layout.Zoomy(**layout_theme),
-            layout.Floating(**layout_theme),
-            ]
+            layout.Floating(**layout_theme)]
 
 
 ##### WIDGETS #####
@@ -271,87 +270,99 @@ def init_widgets_defaults():
                 padding=2,
                 background=colors[2])
 
-
-
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list = [
-               widget.GroupBox(margin_y = 0, 
-                               margin_x = 0, 
-                               padding_y = 6, 
-                               padding_x = 3, 
-                               borderwidth = 1, 
-                               active = colors[6], 
-                               inactive = colors[6],
-                               rounded = False,
-                               highlight_method = "block",
-                               this_current_screen_border = colors[7],
-                               this_screen_border = colors [4],
-                               other_screen_border = colors[1],
-                               foreground = colors[2], 
-                               background = colors[1]
-                               ), 
-               widget.Prompt(prompt=prompt, 
-                             font="MintsStrong",
-                             padding=10, 
-                             foreground = colors[8], 
-                             background=colors[1]
-                             ),
-               widget.WindowName(foreground = colors[3], 
-                                 background = colors[1],
-                                 padding = 10
-                                 ),
-               widget.Systray(background=colors[1]
-                              ),
-               widget.Sep(linewidth = 0,
-                          padding = 10,
-                          foreground = colors[6], 
-                          background = colors[1]
-                          ),
-               widget.TextBox(text=" ↯", 
-                              foreground=colors[3], 
-                              background=colors[1],
-                              padding = 0,
-                              fontsize=14
-                              ),
-               widget.Net(interface = "eth0", 
-                          foreground = colors[6], 
-                          background = colors[1]
-                          ),
-               widget.TextBox(text=" ", 
-                              foreground=colors[3], 
-                              background=colors[1],
-                              padding = 6,
-                              fontsize=14
-                              ),
-               widget.Updates(foreground=colors[6], 
-                              background=colors[1],
-		                      fontsize=9
-		                      ),
-               widget.TextBox(text=" ☵", 
-                              padding = 6,
-		                      foreground=colors[3], 
-                              background=colors[1],
-		                      fontsize=14
-		                      ),
-               widget.CurrentLayout(foreground = colors[6], 
-                                    background = colors[1]
-                                    ),
-               widget.TextBox(text=" ⌚", 
-                              foreground=colors[3],
-                              background=colors[1], 
-                              padding = 6,
-                              fontsize=18
-                              ),
-               widget.Clock(foreground = colors[6], 
-                            background = colors[1],
-                            format="%A, %B %d - %H:%M"
-                            ),
-               widget.Sep(linewidth = 0,
-                          padding = 6,
-                          foreground = colors[6], 
-                          background = colors[1]
-                          ),
+               widget.GroupBox(
+                        margin_y = 0, 
+                        margin_x = 0, 
+                        padding_y = 6, 
+                        padding_x = 3, 
+                        borderwidth = 1, 
+                        active = colors[6], 
+                        inactive = colors[6],
+                        rounded = False,
+                        highlight_method = "block",
+                        this_current_screen_border = colors[7],
+                        this_screen_border = colors [4],
+                        other_screen_border = colors[1],
+                        foreground = colors[2], 
+                        background = colors[1]
+                        ), 
+               widget.Prompt(
+                        prompt=prompt, 
+                        font="MintsStrong",
+                        padding=10, 
+                        foreground = colors[8], 
+                        background=colors[1]
+                        ),
+               widget.WindowName(
+                        foreground = colors[3], 
+                        background = colors[1],
+                        padding = 10
+                        ),
+               widget.Systray(
+                        background=colors[1]
+                        ),
+               widget.Sep(
+                        linewidth = 0,
+                        padding = 10,
+                        foreground = colors[6], 
+                        background = colors[1]
+                        ),
+               widget.TextBox(
+                        text=" ↯", 
+                        foreground=colors[3], 
+                        background=colors[1],
+                        padding = 0,
+                        fontsize=14
+                        ),
+               widget.Net(
+                        interface = "eth0", 
+                        foreground = colors[6], 
+                        background = colors[1]
+                        ),
+               widget.TextBox(
+                        text=" ", 
+                        foreground=colors[3], 
+                        background=colors[1],
+                        padding = 6,
+                        fontsize=14
+                        ),
+               widget.Updates(
+                        foreground=colors[6], 
+                        background=colors[1],
+                        fontsize=9
+		                ),
+               widget.TextBox(
+                        text=" ☵", 
+                        padding = 6,
+                        foreground=colors[3], 
+                        background=colors[1],
+                        fontsize=14
+		                ),
+               widget.CurrentLayout(
+                        foreground = colors[6], 
+                        background = colors[1]
+                        ),
+               widget.TextBox(
+                        text=" ⌚", 
+                        foreground=colors[3],
+                        background=colors[1], 
+                        padding = 6,
+                        fontsize=18
+                        ),
+               widget.Clock(
+                        foreground = colors[6], 
+                        background = colors[1],
+                        format="%A, %B %d - %H:%M"
+                        ),
+               widget.Sep(
+                        linewidth = 0,
+                        padding = 6,
+                        foreground = colors[6], 
+                        background = colors[1]
+                        ),
               ]       
     return widgets_list
 
@@ -360,7 +371,7 @@ def init_widgets_list():
 
 def init_widgets_screen1():
     widgets_screen1 = init_widgets_list()
-    return widgets_screen1[0:1] + widgets_screen1[2:3] + widgets_screen1[4:]   # Slicing removes unwanted widgets from Monitors 1 + 3
+    return widgets_screen1[0:1] + widgets_screen1[2:3] + widgets_screen1[4:]   # Slicing removes unwanted widgets on Monitors 1,3
     
 def init_widgets_screen2():
     widgets_screen2 = init_widgets_list()
