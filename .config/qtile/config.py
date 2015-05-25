@@ -27,7 +27,7 @@ from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 
 
-##### SCREENS ##### (TRIPLE MONITOR SETUP)
+##### DEFINING SOME WINDOW FUNCTIONS #####
 
 @lazy.function
 def window_to_prev_group(qtile):
@@ -94,6 +94,14 @@ def init_keys():
                 lazy.layout.decrease_nmaster(),                      # Decrease number in master pane (Tile)
                 ),
             Key(
+                [mod, "shift"], "Left",                              # Move window to workspace to the left
+                window_to_prev_group
+                ),
+            Key(
+                [mod, "shift"], "Right",                             # Move window to workspace to the right
+                window_to_next_group
+                ),
+            Key(
                 [mod], "n", 
                 lazy.layout.normalize()                              # Restore all windows to default size ratios 
                 ),
@@ -120,7 +128,6 @@ def init_keys():
                 [mod, "control"], "Return", 
                 lazy.layout.toggle_split()                           # Toggle between split and unsplit sides of stack
                 ),
-            
             # GUI Apps
             Key(
                 [mod], "w", 
@@ -138,7 +145,6 @@ def init_keys():
                 [mod], "g", 
                 lazy.spawn("geany")
                 ),
-            
             # Terminal Apps
             Key(
                 [mod], "KP_Insert",                                  # Keypad 0
@@ -180,7 +186,6 @@ def init_keys():
                 [mod], "KP_Page_Up",                                 # Keypad 9
                 lazy.spawn(myTerm+" -e vim "+myConfig)
                 ),
-                
             # Color Testing Scripts
             Key(
                 [mod, "shift"], "KP_End",                            # Keypad 1
