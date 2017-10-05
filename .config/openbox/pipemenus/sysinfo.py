@@ -1,0 +1,1 @@
+.config/openbox/pipemenus/sysinfo.py

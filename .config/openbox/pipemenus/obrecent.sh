@@ -1,0 +1,1 @@
+.config/openbox/pipemenus/obrecent.sh
