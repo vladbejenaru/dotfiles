@@ -1,1 +1,64 @@
-.Xresources
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+*fading:                  0
+*fadeColor:               #002b36
+*cursorColor:             #93a1a1
+*pointerColorBackground:  #586e75
+*pointerColorForeground:  #93a1a1
+
+URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=15:antialias=true:hinting=true
+URxvt*boldFont: xft:Ubuntu Mono derivative Powerline:bold:pixelsize=15:antialias=true:hinting=true
+!*font: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
+!*boldFont: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
+!*font: xft:ohsnap:pixelsize=14:antialias=false:hinting=true
+!*boldFont: xft:ohsnap:pixelsize=14:antialias=false:hinting=true
+
+URxvt*title: terminal
+URxvt*geometry: 96x40
+URxvt*termName:rxvt-unicode
+URxvt*transparent: false
+URxvt*depth: 32
+URxvt*shading: 0
+URxvt*saveLines: 2000
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*borderLess: false
+URxvt*.urlLauncher: firefox
+URxvt.letterSpace: -1
+
+!!!! Cumin !!!!
+
+*background:#232323
+*foreground:#857F68
+
+!Negro-----------
+*color0: #151515
+*color8: #696969
+!Rojo------------
+*color1: #FF8EAF
+*color9: #ED4C7A
+!Verde------------
+*color2:  #A6E25F
+*color10: #A6E179
+!Amarillo---------
+*color3: #F8E578
+*color11: #FFDF6B
+!Azul-------------
+*color4: #A6E2F0
+*color12: #79D2FF
+!Magenta----------
+*color5: #E85B92
+*color13: #BB5D79
+!Cyan-------------
+*color6: #758F5F
+*color14: #98AF87
+!Blanco-----------
+*color7: #D5F1F2
+*color15: #E2F1F6

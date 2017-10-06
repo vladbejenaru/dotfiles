@@ -1,1 +1,22 @@
-.config/canto/conf
+{
+    "defaults": {
+        "global_transform": "filter_read",
+        "keep_time": 86400,
+        "keep_unread": false,
+        "rate": 10
+    },
+    "feeds": [
+        {
+            "name": "Canto",
+            "url": "http://codezen.org/canto-ng/feed/"
+        },
+        {
+            "name": "Slashdot",
+            "url": "http://rss.slashdot.org/slashdot/Slashdot"
+        },
+        {
+            "name": "Reddit",
+            "url": "http://reddit.com/.rss"
+        }
+    ]
+}
