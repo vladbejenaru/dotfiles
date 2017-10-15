@@ -111,4 +111,5 @@ POWERLEVEL9K_TIME_FOREGROUND='015'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user time dir rbenv vcs)
 
-if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
+# Uncomment for screenfetch to appear in newly opened terminal
+# if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
