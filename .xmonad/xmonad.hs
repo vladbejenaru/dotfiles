@@ -1,6 +1,6 @@
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 ---IMPORTS
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
     -- Base
 import XMonad
 import Data.Maybe (isJust)
@@ -65,9 +65,9 @@ import XMonad.Layout.IM (withIM, Property(Role))
     -- Prompts
 import XMonad.Prompt (defaultXPConfig, XPConfig(..), XPPosition(Top), Direction1D(..))
 
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 ---CONFIG
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 myModMask       = mod4Mask  -- Sets modkey to super/windows key
 myTerminal      = "termite"   -- Sets default terminal
 myTextEditor    = "editor"  -- Sets default text editor
@@ -83,13 +83,13 @@ main = do
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = \x -> hPutStrLn xmproc0 x  >> hPutStrLn xmproc1 x  >> hPutStrLn xmproc2 x
                         , ppCurrent = xmobarColor "#DDCCBB" "" . wrap "[" "]"  -- Current workspace in xmobar
-                        , ppVisible = xmobarColor "#DDCCBB" "" . wrap "" ""    -- Visible, but not current, workspace in xmobar
+                        , ppVisible = xmobarColor "#DDCCBB" "" . wrap "" ""    -- Visible but not current workspace
                         , ppHidden = xmobarColor "#99865E" ""                  -- Hidden workspaces in xmobar
-                        , ppHiddenNoWindows = xmobarColor "#99865E" ""         -- Hidden workspaces (no windows) in xmobar
+                        , ppHiddenNoWindows = xmobarColor "#99865E" ""         -- Hidden workspaces (no windows)
                         , ppTitle = xmobarColor "#DDCCBB" "" . shorten 80      -- Title of active window in xmobar
                         , ppSep =  "<fc=#8A9C9E> :: </fc>"                     -- Separators in xmobar
                         , ppUrgent = xmobarColor "#ff0000" "" . wrap "!" "!"   -- Urgent workspace
-                        , ppExtras  = [windowCount]							   -- Number of windows current workspace
+                        , ppExtras  = [windowCount]							   -- # of windows current workspace
                         , ppOrder  = \(ws:l:t:exs) -> [ws,l]++exs++[t]
                         }
         , modMask            = myModMask
@@ -102,19 +102,19 @@ main = do
         , focusedBorderColor = "#76581E"
         } `additionalKeysP`         myKeys 
 
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 ---AUTOSTART
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 myStartupHook = do
           spawnOnce "nitrogen --restore &" 
           spawnOnce "compton --config /home/derek/.config/compton/compton.conf &" 
           setWMName "LG3D"
-          --spawnOnce "/home/derek/.xmonad/xmonad.start"                                                          -- Sets our wallpaper
-          --spawnOnce "compton -cCGfF -o 1.00 -O 0.100 -I 0.100 -t 0 -l 0 -r 3 -D2 -m 0.88 --opacity-rule 75:'class_g *=\"XTerm\"' &"  		-- Enables compositing
+          --spawnOnce "/home/derek/.xmonad/xmonad.start"                                    -- Sets our wallpaper
+          --spawnOnce "compton -cCGfF -o 1.00 -O 0.100 -I 0.100 -t 0 -l 0 -r 3 -D2 -m 0.88 --opacity-rule 75:'class_g *=\"XTerm\"' &"  	-- Enables compositing
 
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 ---KEYBINDINGS
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 myKeys =
     -- Xmonad
         [ ("M-C-r",             spawn "xmonad --recompile")      -- Recompiles xmonad
@@ -224,9 +224,9 @@ myKeys =
         ] where nonNSP          = WSIs (return (\ws -> W.tag ws /= "NSP"))
                 nonEmptyNonNSP  = WSIs (return (\ws -> isJust (W.stack ws) && W.tag ws /= "NSP"))
                 
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 ---WORKSPACES
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 --myWorkspaces = ["main", "web", "text", "chat", "media", "syst"]
 
 xmobarEscape = concatMap doubleLts
@@ -260,9 +260,9 @@ myManageHook = placeHook (withGaps (20,12,12,12) (smart (0.5,0.5))) <+> insertPo
             myUnfloatApps = ["gimp"]
 
 
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 ---LAYOUTS
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ renamed [CutWordsLeft 4] $ maximize $ minimize $ boringWindows $ spacing 0 $
                 onWorkspace "main"  myTermLayout $
                 onWorkspace "web"  myWebLayout $

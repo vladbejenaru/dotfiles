@@ -210,7 +210,7 @@ def init_keys():
                 ),
             Key(
                 [mod, "shift"], "KP_Left",                           # Keypad 4
-                lazy.spawn(myTerm+" -e 'httping -K localhost'")
+                lazy.spawn(myTerm+" -e 'httping -KY --draw-phase localhost'")
                 ),
             Key(
                 [mod, "shift"], "KP_Begin",                          # Keypad 5
@@ -239,16 +239,13 @@ def init_keys():
 ##### BAR COLORS #####
 
 def init_colors():
-    return [["#CEFF7C", "#D1FF6A"], # bright, light green for widget icons
-            ["#131313", "#000000"], # black gradiant for bar background
-            ["#909E51", "#909E51"], # green gradiant for bar background
-            ["#906756", "#927E7E"], # light green gradiant for this screen tab
-            ["#464B00", "#4F5322"], # dark green gradiant for other screen tabs
-            ["#ffffff", "#d7d7d7"], # dark green gradiant for other screen tabs
-            ["#A09D90", "#C5C1BA"], # dark green gradiant for other screen tabs
-            ["#6D2021", "#7C2735"], # green gradiant for bar background
-            ["#C45500", "#E7653F"]] # light green gradiant for this screen tab
-
+    return [["#161616", "#1a1a1a"], # black gradiant for bar background
+            ["#472531", "#4E272F"], # light green gradiant for this screen tab
+            ["#8C8A7F", "#857F68"], # dark green gradiant for other screen tabs
+            ["#C45500", "#E7653F"], # light green gradiant for this screen tab
+            ["#32440E", "#2C3B09"], # dark green gradiant for other screen tabs
+            ["#758F5F", "#758F5F"], # dark green gradiant for other screen tabs
+            ["#995C6B", "#BB5D79"]] # dark green gradiant for other screen tabs
 
 ##### GROUPS #####
     
@@ -306,7 +303,7 @@ def init_layouts():
 ##### WIDGETS #####
 
 def init_widgets_defaults():
-    return dict(font="Ubuntu",
+    return dict(font="Ubuntu Mono",
                 fontsize = 11,
                 padding = 2,
                 background=colors[2])
@@ -317,8 +314,8 @@ def init_widgets_list():
                widget.Sep(
                         linewidth = 0,
                         padding = 6,
-                        foreground = colors[6], 
-                        background = colors[1]
+                        foreground = colors[2], 
+                        background = colors[0]
                         ),
                widget.GroupBox(font="Ubuntu Bold",
                         fontsize = 9,
@@ -327,87 +324,87 @@ def init_widgets_list():
                         padding_y = 9, 
                         padding_x = 5, 
                         borderwidth = 1, 
-                        active = colors[6], 
-                        inactive = colors[6],
+                        active = colors[2], 
+                        inactive = colors[2],
                         rounded = False,
                         highlight_method = "block",
-                        this_current_screen_border = colors[7],
+                        this_current_screen_border = colors[1],
                         this_screen_border = colors [4],
-                        other_current_screen_border = colors[1],
-                        other_screen_border = colors[1],
+                        other_current_screen_border = colors[0],
+                        other_screen_border = colors[0],
                         foreground = colors[2], 
-                        background = colors[1]
+                        background = colors[0]
                         ), 
                widget.Prompt(
                         prompt=prompt, 
                         font="Ubuntu Mono",
                         padding=10, 
-                        foreground = colors[8], 
-                        background=colors[1]
+                        foreground = colors[3], 
+                        background=colors[0]
                         ),
                widget.Sep(
                         linewidth = 0,
                         padding = 10,
-                        foreground = colors[6], 
-                        background = colors[1]
+                        foreground = colors[2], 
+                        background = colors[0]
                         ),
                widget.WindowName(font="Ubuntu",
                         fontsize = 11,
-                        foreground = colors[3], 
-                        background = colors[1],
+                        foreground = colors[5], 
+                        background = colors[0],
                         padding = 6
                         ),
                widget.Systray(
-                        background=colors[1]
+                        background=colors[0]
                         ),
                widget.Sep(
                         linewidth = 0,
                         padding = 10,
-                        foreground = colors[6], 
-                        background = colors[1]
+                        foreground = colors[2], 
+                        background = colors[0]
                         ),
                widget.TextBox(
                         text=" ↯", 
-                        foreground=colors[3], 
-                        background=colors[1],
+                        foreground=colors[6], 
+                        background=colors[0],
                         padding = 0,
                         fontsize=14
                         ),
                widget.Net(
                         interface = "enp3s0", 
-                        foreground = colors[6], 
-                        background = colors[1]
+                        foreground = colors[5], 
+                        background = colors[0]
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
                         text=" ☵", 
                         padding = 6,
-                        foreground=colors[3], 
-                        background=colors[1],
+                        foreground=colors[6], 
+                        background=colors[0],
                         fontsize=14
 		                ),
                widget.CurrentLayout(
-                        foreground = colors[6], 
-                        background = colors[1]
+                        foreground = colors[5], 
+                        background = colors[0]
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
                         text=" 🕒", 
-                        foreground=colors[3],
-                        background=colors[1], 
+                        foreground=colors[6],
+                        background=colors[0], 
                         padding = 6,
                         fontsize=14
                         ),
                widget.Clock(
-                        foreground = colors[6], 
-                        background = colors[1],
+                        foreground = colors[5], 
+                        background = colors[0],
                         format="%A, %B %d - %H:%M"
                         ),
                widget.Sep(
                         linewidth = 0,
                         padding = 6,
-                        foreground = colors[6], 
-                        background = colors[1]
+                        foreground = colors[2], 
+                        background = colors[0]
                         ),
               ]       
     return widgets_list

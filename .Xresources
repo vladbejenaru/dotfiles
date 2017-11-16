@@ -7,31 +7,31 @@ Xft.autohint: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
-*fading:                  0
-*fadeColor:               #002b36
-*cursorColor:             #93a1a1
-*pointerColorBackground:  #586e75
-*pointerColorForeground:  #93a1a1
 
-URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=15:antialias=true:hinting=true
-URxvt*boldFont: xft:Ubuntu Mono derivative Powerline:bold:pixelsize=15:antialias=true:hinting=true
-!*font: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
-!*boldFont: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
-!*font: xft:ohsnap:pixelsize=14:antialias=false:hinting=true
-!*boldFont: xft:ohsnap:pixelsize=14:antialias=false:hinting=true
+UXTerm*faceName: Ubuntu Mono for Powerline:style=Regular
+XTerm*faceName: Ubuntu Mono for Powerline:style=Regular
+XTerm*faceNameDoublesize: Ubuntu Mono for Powerline:style=Regular
+XTerm*faceSize:11
 
-URxvt*title: terminal
-URxvt*geometry: 96x40
-URxvt*termName:rxvt-unicode
-URxvt*transparent: false
-URxvt*depth: 32
-URxvt*shading: 0
-URxvt*saveLines: 2000
+URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=15:antialias=true:hinting=true
+URxvt*boldFont: xft:Ubuntu\ Mono\ derivative\ Powerline:bold:pixelsize=15:antialias=true:hinting=true
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
-URxvt*borderLess: false
-URxvt*.urlLauncher: firefox
-URxvt.letterSpace: -1
+
+XTerm*title: terminal
+XTerm*geometry: 96x40
+XTerm*termName:xterm-256color
+XTerm*saveLines: 2000
+XTerm*scrollBar: false
+XTerm*scrollBar_right: false
+XTerm*borderLess: false
+XTerm*.urlLauncher: lynx
+XTerm.letterSpace: -1
+XTerm*utf8: 1
+XTerm*locale: true
+XTerm*utf8Title: true
+XTerm*renderFont: true
+
 
 !!!! Cumin !!!!
 
@@ -39,7 +39,7 @@ URxvt.letterSpace: -1
 *foreground:#857F68
 
 !Negro-----------
-*color0: #151515
+*color0: #232323
 *color8: #696969
 !Rojo------------
 *color1: #FF8EAF
@@ -62,3 +62,5 @@ URxvt.letterSpace: -1
 !Blanco-----------
 *color7: #D5F1F2
 *color15: #E2F1F6
+
+

@@ -91,7 +91,7 @@
 			<item label="Archive Manager">
 				<action name="Execute">
 					<command>
-<![CDATA[file-roller]]>																																																																																																																																																																																															
+<![CDATA[file-roller]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -115,7 +115,7 @@
 			<item label="Font Viewer">
 				<action name="Execute">
 					<command>
-<![CDATA[gnome-font-viewer]]>																																																																																																																																																																																															
+<![CDATA[gnome-font-viewer]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -129,7 +129,7 @@
 			<item label="Onboard">
 				<action name="Execute">
 					<command>
-<![CDATA[onboard]]>																																																																																																																																																																																															
+<![CDATA[onboard]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -141,7 +141,7 @@
 			<item label="Screen Reader">
 				<action name="Execute">
 					<command>
-<![CDATA[orca --replace]]>																																																																																																																																																																																															
+<![CDATA[orca --replace]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -194,14 +194,14 @@
 			<item label="Mahjongg">
 				<action name="Execute">
 					<command>
-<![CDATA[gnome-mahjongg]]>																																																																																																																																																																																															
+<![CDATA[gnome-mahjongg]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
 			<item label="Mines">
 				<action name="Execute">
 					<command>
-<![CDATA[gnome-mines]]>																																																																																																																																																																																															
+<![CDATA[gnome-mines]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -234,7 +234,7 @@
 			<item label="ImageMagick (display)">
 				<action name="Execute">
 					<command>
-<![CDATA[/usr/bin/display.im6]]>																																																																																																																																																																																															
+<![CDATA[/usr/bin/display.im6]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -251,7 +251,7 @@
 			<item label="LRF Viewer">
 				<action name="Execute">
 					<command>
-<![CDATA[lrfviewer]]>																																																																																																																																																																																															
+<![CDATA[lrfviewer]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -271,6 +271,11 @@
 			</item>
 		</menu>
 		<menu id="root-menu-273054" label="Internet">
+			<item label="Canto RSS Reader">
+				<action name="Execute">
+					<execute>termite -e 'canto-curses' -t 'Canto RSS Reader' </execute>
+				</action>
+			</item>
 			<item label="Chromium">
 				<action name="Execute">
 					<execute>chromium-browser %U</execute>
@@ -323,7 +328,7 @@
 			<item label="Remmina Remote Desktop">
 				<action name="Execute">
 					<command>
-<![CDATA[remmina]]>																																																																																																																																																																																															
+<![CDATA[remmina]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -376,7 +381,7 @@
 			<item label="Calibre">
 				<action name="Execute">
 					<command>
-<![CDATA[calibre]]>																																																																																																																																																																																															
+<![CDATA[calibre]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -390,42 +395,42 @@
 			<item label="Document Viewer">
 				<action name="Execute">
 					<command>
-<![CDATA[evince]]>																																																																																																																																																																																															
+<![CDATA[evince]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Calc">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --calc]]>																																																																																																																																																																																															
+<![CDATA[libreoffice --calc]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Draw">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --draw]]>																																																																																																																																																																																															
+<![CDATA[libreoffice --draw]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Impress">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --impress]]>																																																																																																																																																																																															
+<![CDATA[libreoffice --impress]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Math">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --math]]>																																																																																																																																																																																															
+<![CDATA[libreoffice --math]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Writer">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --writer]]>																																																																																																																																																																																															
+<![CDATA[libreoffice --writer]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -441,9 +446,19 @@
 					<execute>anoise</execute>
 				</action>
 			</item>
+			<item label="Cava">
+				<action name="Execute">
+					<execute>termite -e 'cava' -t 'cava audio visualizer'  </execute>
+				</action>
+			</item>
 			<item label="Cheese">
 				<action name="Execute">
 					<execute>cheese</execute>
+				</action>
+			</item>
+			<item label="Cmus">
+				<action name="Execute">
+					<execute>termite -e 'cmus' -t 'cmus music player' </execute>
 				</action>
 			</item>
 			<item label="Deadbeef">
@@ -454,7 +469,7 @@
 			<item label="Gespeaker">
 				<action name="Execute">
 					<command>
-<![CDATA[/usr/bin/gespeaker]]>																																																																																																																																																																																															
+<![CDATA[/usr/bin/gespeaker]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -466,7 +481,7 @@
 			<item label="Gmusicbrowser">
 				<action name="Execute">
 					<command>
-<![CDATA[gmusicbrowser]]>																																																																																																																																																																																															
+<![CDATA[gmusicbrowser]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -600,7 +615,7 @@
 			<item label="Activity Log Manager">
 				<action name="Execute">
 					<command>
-<![CDATA[activity-log-manager]]>																																																																																																																																																																																															
+<![CDATA[activity-log-manager]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -614,7 +629,7 @@
 			<item label="Backups">
 				<action name="Execute">
 					<command>
-<![CDATA[deja-dup-preferences]]>																																																																																																																																																																																															
+<![CDATA[deja-dup-preferences]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -633,7 +648,7 @@
 			<item label="Disks Utility">
 				<action name="Execute">
 					<command>
-<![CDATA[gnome-disks]]>																																																																																																																																																																																															
+<![CDATA[gnome-disks]]>																																																																																																																																																																																																																	
 					</command>
 				</action>
 			</item>
@@ -702,8 +717,13 @@
 			<item label="GDebi Package Installer">
 				<action name="Execute">
 					<command>
-<![CDATA[gdebi-gtk]]>																																																																																																																																																																																															
+<![CDATA[gdebi-gtk]]>																																																																																																																																																																																																																	
 					</command>
+				</action>
+			</item>
+			<item label="Glances">
+				<action name="Execute">
+					<execute>termite -e 'glances' -t 'glances'</execute>
 				</action>
 			</item>
 			<item label="Htop">
@@ -728,8 +748,13 @@
 			<item label="Network Connections">
 				<action name="Execute">
 					<command>
-<![CDATA[nm-connection-editor]]>																																																																																																																																																																																															
+<![CDATA[nm-connection-editor]]>																																																																																																																																																																																																																	
 					</command>
+				</action>
+			</item>
+			<item label="Nmon">
+				<action name="Execute">
+					<execute>termite -e 'nmon' -t 'nmon'</execute>
 				</action>
 			</item>
 			<item label="Nvidia Settings">
@@ -782,6 +807,11 @@
 					</execute>
 				</action>
 			</item>
+			<item label="Stress Terminal UI">
+				<action name="Execute">
+					<execute>termite -e 's-tui' -t 'Stress Terminal UI' </execute>
+				</action>
+			</item>
 			<item label="Synaptic Package Manager">
 				<action name="Execute">
 					<execute>
@@ -817,9 +847,34 @@
 			</item>
 		</menu>
 		<menu id="root-menu-46598" label="Config Files">
+			<item label="Bash RC">
+				<action name="Execute">
+					<execute>termite -e 'vim ~/.bashrc' -t 'Bash RC'</execute>
+				</action>
+			</item>
+			<item label="Canto Conf">
+				<action name="Execute">
+					<execute>termite -e 'vim ~/.config/canto/conf' -t 'Canto Conf'</execute>
+				</action>
+			</item>
+			<item label="Compton">
+				<action name="Execute">
+					<execute>termite -e 'vim ~/.config/compton/compton.conf' -t 'Compton Conf'</execute>
+				</action>
+			</item>
+			<item label="Irssi">
+				<action name="Execute">
+					<execute>termite -e 'vim ~/.irssi/config' -t 'Irssi Conf'</execute>
+				</action>
+			</item>
 			<item label="Qtile Config">
 				<action name="Execute">
 					<execute>termite -e 'vim ~/.config/qtile/config.py' -t 'qtile config.py'</execute>
+				</action>
+			</item>
+			<item label="Termite Config">
+				<action name="Execute">
+					<execute>termite -e 'vim ~/.config/termite/config' -t 'Termite Config'</execute>
 				</action>
 			</item>
 			<item label="Xmonad Config">
@@ -830,6 +885,11 @@
 			<item label="Xresources">
 				<action name="Execute">
 					<execute>termite -e 'vim ~/.Xresources' -t 'Xresrouces'</execute>
+				</action>
+			</item>
+			<item label="Zsh RC">
+				<action name="Execute">
+					<execute>termite -e 'vim ~/.zshrc' -t 'Zsh RC'</execute>
 				</action>
 			</item>
 		</menu>

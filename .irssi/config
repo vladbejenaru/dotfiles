@@ -11,6 +11,8 @@ servers = (
   { 
     address = "chat.freenode.net";
     chatnet = "Freenode";
+    autoconnect = "yes";
+    password = "DistroTube:pepperoni1";
     port = "6667";
   },
   {
@@ -383,6 +385,6 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "derek"; user_name = "derek"; nick = "derek"; };
+  core = { real_name = "Derek W. Taylor"; user_name = "DistroTube"; nick = "DistroTube"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };

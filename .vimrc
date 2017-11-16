@@ -59,6 +59,7 @@ hi Statement ctermfg=3
 let g:rehash256 = 1
 let g:Powerline_symbols='unicode'
 set guifont=Ubuntu\ Mono\ for\ Powerline "make sure to escape the spaces in the name properly
+" set guifont=Ubuntu\ Mono\ for\ Powerline:10
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -72,3 +73,8 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:hi hsImport ctermfg=7

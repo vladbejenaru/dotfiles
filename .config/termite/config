@@ -45,7 +45,7 @@ scrollback_lines = 10000
 
 foreground = #857F68
 foreground_bold = #ffffff
-background = #232323
+background = #171717
 
 # 20% background transparency (requires a compositor)
 background = rgba(35, 35, 35, 1.0)
@@ -54,7 +54,7 @@ background = rgba(35, 35, 35, 1.0)
 highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-color0 = #151515
+color0 = #171717
 color1 = #FF8EAF
 color2 = #A6E25F
 color3 = #F8E578
@@ -70,6 +70,7 @@ color12 = #79D2FF
 color13 = #BB5D79
 color14 = #98AF87
 color15 = #E2F1F6
+
 
 [hints]
 #font = Monospace 12
