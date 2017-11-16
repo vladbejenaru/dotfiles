@@ -12,7 +12,7 @@ servers = (
     address = "chat.freenode.net";
     chatnet = "Freenode";
     autoconnect = "yes";
-    password = "DistroTube:pepperoni1";
+    password = "DistroTube:PASSSWORD";
     port = "6667";
   },
   {
