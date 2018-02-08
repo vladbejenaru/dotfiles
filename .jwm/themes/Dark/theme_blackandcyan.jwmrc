@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+<JWM>
+
+   <!-- The root menu, if this is undefined you will not get a menu. -->
+   <!-- Additional RootMenu attributes: onroot, labeled, label -->
+   <RootMenu height="15" onroot="123">
+      <Program icon="utilities-terminal.png" label="Terminal">x-terminal-emulator</Program>
+      <Program icon="web-browser.png" label="Www Browser">x-www-browser</Program>
+
+      <Include>/etc/jwm/debian-menu</Include>
+
+      <Separator/>
+      <Program icon="changes-prevent.png" label="Lock">
+         xscreensaver-command -activate
+      </Program>
+      <Separator/>
+      <Restart label="Restart" icon="system-shutdown.png"/>
+      <Exit label="Exit" confirm="true" icon="action-unavailable.png"/>
+   </RootMenu>
+
+   <!-- Additional tray attributes: autohide, width, border, layer, layout -->
+   <Tray  x="0" y="-1" height="32" autohide="false">
+
+      <!-- Additional TrayButton attribute: label -->
+      <TrayButton label="JWM">root:1</TrayButton>
+
+      <TrayButton icon="emblem-photos.png">showdesktop</TrayButton>
+
+      <!-- Additional Pager attribute: labeled -->
+      <Pager labeled="true"/>
+
+      <TaskList maxwidth="256"/>
+
+      <Dock/>
+
+      <!-- Additional Swallow attribute: height -->
+	<Swallow name="xload" width="64">
+        xload -nolabel -bg black -fg cyan -hl azure
+	</Swallow>
+
+      <Clock format="%H:%M">xclock</Clock>
+
+   </Tray>
+
+   <!-- Visual Styles -->
+
+   <WindowStyle>
+
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+    <Width>3</Width>
+    <Height>22</Height>     
+
+
+    <Active>
+       <Text>#F0F8FF</Text>
+       <Title>#00E5EE:#000000</Title>
+       
+       <Outline>#000000</Outline>
+    </Active>
+
+
+    <Inactive>
+       <Text>#9FB6CD</Text>
+       <Title>#F0FFFF:#000000</Title>         
+       
+       <Outline>#000000</Outline>
+    </Inactive>
+
+   </WindowStyle>
+
+   <TaskListStyle>
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+   <ActiveForeground>#BBFFFF</ActiveForeground>
+   <ActiveBackground>#008080:#000000</ActiveBackground>
+   <Background>#696969:#000000</Background>
+</TaskListStyle>
+
+
+   <!-- Additional TrayStyle attribute: insert -->
+   <TrayStyle>
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+   <Foreground>#BDFCC9</Foreground>
+   <Background>#000000</Background>
+</TrayStyle>
+
+<PagerStyle>
+   <Outline>#B0E2FF</Outline>
+   <Foreground>#282828</Foreground>
+   <Background>#808A87</Background>
+   <ActiveForeground>#808A87</ActiveForeground>
+   <ActiveBackground>#282828</ActiveBackground>
+</PagerStyle>
+
+   <MenuStyle>
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+   <Foreground>#B2DFEE</Foreground>
+   <Background>#1E1E1E</Background>
+   <ActiveForeground>#FFE1FF</ActiveForeground>
+   <ActiveBackground>#00E5EE:#000000</ActiveBackground>
+</MenuStyle>
+
+   <PopupStyle>
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+   <Outline>#000000</Outline>
+   <Foreground>#00FFFF</Foreground>
+   <Background>#000000</Background>
+</PopupStyle>
+
+
+   <IconPath>
+      /usr/share/icons/jwm/
+   </IconPath>
+
+   <!-- Virtual Desktops -->
+   <!-- Desktop tags can be contained within Desktops for desktop names. -->
+   <Desktops width="4" height="1">
+      <!-- Default background. Note that a Background tag can be
+           contained within a Desktop tag to give a specific background
+           for that desktop.
+       -->
+      <Background type="solid">black</Background>
+   </Desktops>
+
+   <!-- Double click speed (in milliseconds) -->
+   <DoubleClickSpeed>400</DoubleClickSpeed>
+
+   <!-- Double click delta (in pixels) -->
+   <DoubleClickDelta>2</DoubleClickDelta>
+
+   <!-- The focus model (sloppy or click) -->
+   <FocusModel>sloppy</FocusModel>
+
+   <!-- The snap mode (none, screen, or border) -->
+   <SnapMode distance="10">border</SnapMode>
+
+   <!-- The move mode (outline or opaque) -->
+   <MoveMode>opaque</MoveMode>
+
+   <!-- The resize mode (outline or opaque) -->
+   <ResizeMode>opaque</ResizeMode>
+
+   <StartupCommand>xbattbar -I azure -O black -i cyan -o black -p 10 -c -t 1 -a bottom</StartupCommand>
+
+   <!-- Key bindings -->
+   <Key key="Up">up</Key>
+   <Key key="Down">down</Key>
+   <Key key="Right">right</Key>
+   <Key key="Left">left</Key>
+   <Key key="h">left</Key>
+   <Key key="j">down</Key>
+   <Key key="k">up</Key>
+   <Key key="l">right</Key>
+   <Key key="Return">select</Key>
+   <Key key="Escape">escape</Key>
+
+   <Key mask="A" key="Tab">next</Key>
+   <Key mask="A" key="F4">close</Key>
+   <Key mask="A" key="#">desktop#</Key>
+   <Key mask="A" key="F1">root:1</Key>
+   <Key mask="A" key="F2">window</Key>
+   <Key mask="A" key="F10">maximize</Key>
+   <Key mask="A" key="Right">rdesktop</Key>
+   <Key mask="A" key="Left">ldesktop</Key>
+   <Key mask="A" key="Up">udesktop</Key>
+   <Key mask="A" key="Down">ddesktop</Key>
+
+</JWM>
+
+

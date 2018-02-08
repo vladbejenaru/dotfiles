@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<JWM>
+
+	<RootMenu height="15" onroot="123">
+
+	 <Program icon="xterm.png" label="Terminal">x-terminal-emulator</Program>
+	 <Program icon="google-chrome-old.png" label="Chrome">google-chrome-stable</Program>
+	 <Program icon="qupzilla.png" label="Midori">midori</Program>
+	 <Program icon="chess.png" label="Chess">xboard</Program>
+	 <Include>/etc/jwm/debian-menu</Include>
+
+	 <Separator/>
+	  <Program icon="emblem-readonly.png" label="Lock">
+	  xscreensaver-command -activate
+	  </Program>
+	 <Separator/>
+
+	 <Restart label="Restart" icon="system-restart.png"/>
+	 <Exit label="Exit" confirm="true" icon="system-log-out.png"/>
+	 <Program icon="system-shutdown.png" label="Shutdown">sh /home/user/scripts/shutdown.sh</Program>
+
+	</RootMenu>
+
+	<Tray  x="0" y="-1" height="32" autohide="false">
+
+	<TrayButton label="Qemu">root:1</TrayButton>
+
+	<TrayButton icon="gaupol.png">showdesktop</TrayButton>
+
+	<Pager labeled="true"/>
+
+	<TaskList maxwidth="256"/>
+
+	<Dock/>
+
+	<TrayButton popup="Terminal" icon="xterm.png">exec:x-terminal-emulator</TrayButton>
+	<TrayButton popup="Volume Control" icon="unity-tweak-tool.png">exec:pavucontrol</TrayButton>
+	<TrayButton popup="File Manager" icon="nemo.png">exec:/usr/bin/pcmanfm</TrayButton>
+	<TrayButton popup="Calculator" icon="applications-mathematics.png">exec:gcalctool</TrayButton>
+	<TrayButton popup="Leafpad" icon="leafpad.png">exec:leafpad</TrayButton>
+	<TrayButton popup="Midori Web Browser" icon="qupzilla.png">exec:midori</TrayButton>
+	<TrayButton popup="Sylpheed Email" icon="thunderbird.png">exec:sylpheed</TrayButton>
+	<TrayButton popup="Calendar Script" icon="web-google-calendar.png">exec:/home/user/scripts/xcal.sh</TrayButton>
+
+	<Swallow name="xload" width="64">
+        xload -nolabel -bg white -fg purple -hl green
+	</Swallow>
+
+	<Clock format="%H:%M">xclock</Clock>
+
+	</Tray>
+
+   	<!-- Visual Styles -->
+
+   	<WindowStyle>
+
+      	 <Font>Sans-9</Font>
+    	 <Width>3</Width>
+    	 <Height>22</Height> 
+
+    	<Active>
+      	 <Text>#F5FFFA</Text>
+      	 <Title>#7F007F:#228B22</Title>
+      	 <Outline>#7F007F</Outline>
+    	</Active>
+
+    	<Inactive>
+      	 <Text>#228B22</Text>
+      	 <Title>#29004A:#006400</Title>         
+      	 <Outline>#29004A</Outline>
+    	</Inactive>
+
+   	</WindowStyle>
+
+   	<TaskListStyle>
+     	 <Font>Sans-9</Font>
+  	 <ActiveForeground>#F5FFFA</ActiveForeground>
+  	 <ActiveBackground>#7F007F:#DA70D6</ActiveBackground>
+  	 <Background>#008000:#008000</Background>
+	</TaskListStyle>
+
+	<TrayStyle>
+     	 <Font>Sans-9</Font>
+  	 <Foreground>#F5FFFA</Foreground>
+  	 <Background>#008000</Background>
+	</TrayStyle>
+
+	<PagerStyle>
+  	 <Outline>#F5FFFA</Outline>
+  	 <Foreground>#ADFF2F</Foreground>
+  	 <Background>#008000</Background>
+  	 <ActiveForeground>#F5FFFA</ActiveForeground>
+   	 <ActiveBackground>#DDA0DD</ActiveBackground>
+	</PagerStyle>
+
+	<MenuStyle>
+	 <Font>Sans-9</Font>
+	 <Foreground>#F5FFFA</Foreground>
+	 <Background>#008000</Background>
+	 <ActiveForeground>#F5FFFA</ActiveForeground>
+	 <ActiveBackground>#7F007F:#DA70D6</ActiveBackground>
+	</MenuStyle>
+
+	<PopupStyle>
+	 <Font>Sans-9</Font>
+	 <Outline>#7F007F</Outline>
+	 <Foreground>#F5FFFA</Foreground>
+	 <Background>#228B22</Background>
+	</PopupStyle>
+
+<!--
+#7FFF00 - Chartreus (neon green)+
+#006400 - Dark Green+
+#228B22 - Forest Green+
+#00FF00 - Green
+#008000 - Web Green (dark)
+#ADFF2F - Green yellow
+#7CFC00 - lawn green
+#9ACD32 - Yellow Green
+#F5FFFA - Mint Cream
+
+#EE82EE - Violet
+#6A5ACD - Slate Blue
+#663399 - REbecca Purple
+#7F007F - Web Purple+
+#A020F0 - Purple
+#DDA0DD - Plum
+#DA70D6 - Orchid
+#9370DB - Medium Purple
+#4B0082 - Indigo
+#9400D3 - Dark Violet
+#8B008B - Dark Magenta
+#29004A - Dark Purple+
+#8A2BE2 - Blue Violet
+-->
+
+	<IconPath>
+	 /home/user/icons/jwm/moka
+	</IconPath>
+
+	<Desktops width="2" height="2">
+	 <Background type="command">nitrogen --restore</Background>
+	</Desktops>
+
+	<DoubleClickSpeed>400</DoubleClickSpeed>
+
+	<DoubleClickDelta>2</DoubleClickDelta>
+
+	<FocusModel>sloppy</FocusModel>
+
+	<SnapMode distance="10">border</SnapMode>
+
+	<MoveMode>opaque</MoveMode>
+
+	<ResizeMode>opaque</ResizeMode>
+
+	<StartupCommand>xbattbar -I green -O black -i purple -o black -p 10 -c -t 1 -a bottom</StartupCommand>
+	<StartupCommand>nm-applet</StartupCommand>
+
+	<Key key="Up">up</Key>
+	<Key key="Down">down</Key>
+	<Key key="Right">right</Key>
+	<Key key="Left">left</Key>
+	<Key key="h">left</Key>
+	<Key key="j">down</Key>
+	<Key key="k">up</Key>
+	<Key key="l">right</Key>
+	<Key key="Return">select</Key>
+	<Key key="Escape">escape</Key>
+
+	<Key mask="A" key="Tab">next</Key>
+	<Key mask="A" key="F4">close</Key>
+	<Key mask="A" key="#">desktop#</Key>
+	<Key mask="A" key="F1">root:1</Key>
+	<Key mask="A" key="F2">window</Key>
+	<Key mask="A" key="F10">maximize</Key>
+	<Key mask="A" key="Right">rdesktop</Key>
+	<Key mask="A" key="Left">ldesktop</Key>
+	<Key mask="A" key="Up">udesktop</Key>
+	<Key mask="A" key="Down">ddesktop</Key>
+
+</JWM>
+
+

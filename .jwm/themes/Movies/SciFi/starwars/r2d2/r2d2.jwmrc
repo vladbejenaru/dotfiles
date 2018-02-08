@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+<JWM>
+
+	<RootMenu height="15" onroot="123">
+
+	<Program icon="xterm.png" label="Terminal">aterm</Program>
+	<Program icon="google-chrome-old.png" label="Chrome">google-chrome-stable</Program>
+	<Program icon="qupzilla.png" label="Midori">midori</Program>
+	<Program icon="chess.png" label="Chess">xboard</Program>
+	<Separator/>
+	<Include>/etc/jwm/debian-menu</Include>
+	<Separator/>
+	<Program icon="emblem-readonly.png" label="Lock">
+	xscreensaver-command -activate
+	</Program>
+	<Separator/>
+
+	<Restart label="Restart" icon="system-restart.png"/>
+	<Exit label="Exit" confirm="true" icon="system-log-out.png"/>
+	<Program icon="system-shutdown.png" label="Shutdown">aterm -e sudo poweroff</Program>
+
+	</RootMenu>
+
+	<Tray  x="0" y="-1" height="32" autohide="false">
+
+	<TrayButton label="Qemu">root:1</TrayButton>
+
+	<TrayButton icon="gaupol.png">showdesktop</TrayButton>
+
+	<Pager labeled="true"/>
+
+	<TaskList maxwidth="256"/>
+
+	<Dock/>
+	<TrayButton popup="Terminal" icon="aqemu.png">exec:aqemu</TrayButton>
+	<TrayButton popup="Terminal" icon="xterm.png">exec:aterm</TrayButton>
+	<TrayButton popup="Volume Control" icon="unity-tweak-tool.png">exec:pavucontrol</TrayButton>
+	<TrayButton popup="File Manager" icon="nemo.png">exec:/usr/bin/pcmanfm</TrayButton>
+	<TrayButton popup="Calculator" icon="applications-mathematics.png">exec:gnome-calculator</TrayButton>
+	<TrayButton popup="Leafpad" icon="leafpad.png">exec:leafpad</TrayButton>
+	<TrayButton popup="Midori Web Browser" icon="qupzilla.png">exec:midori</TrayButton>
+	<TrayButton popup="Sylpheed Email" icon="thunderbird.png">exec:sylpheed</TrayButton>
+	<TrayButton popup="Calendar Script" icon="web-google-calendar.png">exec:/home/user/scripts/xcal.sh</TrayButton>
+
+	<Swallow name="xload" width="64">
+        xload -nolabel -bg gray -fg blue -hl white
+	</Swallow>
+
+	<Clock format="%H:%M">xclock</Clock>
+
+	</Tray>
+
+   	<!-- Visual Styles -->
+
+	<WindowStyle>
+
+	<Font>sans:10</Font>
+	<Width>3</Width>
+	<Height>22</Height>     
+
+
+	<Active>
+	<Text>#ffffff</Text>
+	<Title>#2d3963:#96938e</Title>         
+	<Outline>#4b494a</Outline>
+	</Active>
+
+
+	<Inactive>
+	<Text>#fefdf9</Text>
+	<Title>#7f8bbb:#96938e</Title>         
+	<Outline>#4b494a</Outline>
+	</Inactive>
+
+	</WindowStyle>
+
+	<TaskListStyle>
+	<Font>sans:10</Font>
+	<ActiveForeground>#fefdf9</ActiveForeground>
+	<ActiveBackground>#2d3963:#96938e</ActiveBackground>
+	<Background>#2d3963:#96938e</Background>
+	</TaskListStyle>
+
+	<TrayStyle>
+	<Font>sans:10</Font>
+	<Foreground>#fefdf9</Foreground>
+	<Background>#96938e</Background>
+	</TrayStyle>
+
+	<PagerStyle>
+	<Outline>#777556</Outline>
+	<Foreground>#96938e</Foreground>
+	<Background>#4b494a</Background>
+	<ActiveForeground>#7f8bbb</ActiveForeground>
+	<ActiveBackground>#2d3963</ActiveBackground>
+	</PagerStyle>
+
+	<MenuStyle>
+	<Font>sans:10</Font>
+	<Foreground>#fefdf9</Foreground>
+	<Background>#96938e</Background>
+	<ActiveForeground>#ffa3a6</ActiveForeground>
+	<ActiveBackground>#2d3963:#7f8bbb</ActiveBackground>
+	</MenuStyle>
+
+	<PopupStyle>
+	<Font>sans:10</Font>
+	<Outline>#7f8bbb</Outline>
+	<Foreground>#2d3963</Foreground>
+	<Background>#96938e</Background>
+	</PopupStyle>
+
+<!--
+2d3963 royal blue
+7f8bbb light blue
+96938e light gray
+4b494a dark gray
+fefdf9 almost white
+ffa3a6 pink eye
+-->
+
+	<IconPath>
+	 /home/user/icons/jwm/moka
+	</IconPath>
+
+	<Desktops width="2" height="2">
+	 <Background type="command">nitrogen --restore</Background>
+	</Desktops>
+
+	<DoubleClickSpeed>400</DoubleClickSpeed>
+
+	<DoubleClickDelta>2</DoubleClickDelta>
+
+	<FocusModel>sloppy</FocusModel>
+
+	<SnapMode distance="10">border</SnapMode>
+
+	<MoveMode>opaque</MoveMode>
+
+	<ResizeMode>opaque</ResizeMode>
+
+	<StartupCommand>wicd-client</StartupCommand>
+	<StartupCommand>conky -d</StartupCommand>
+
+	<Key key="Up">up</Key>
+	<Key key="Down">down</Key>
+	<Key key="Right">right</Key>
+	<Key key="Left">left</Key>
+	<Key key="h">left</Key>
+	<Key key="j">down</Key>
+	<Key key="k">up</Key>
+	<Key key="l">right</Key>
+	<Key key="Return">select</Key>
+	<Key key="Escape">escape</Key>
+
+	<Key mask="A" key="Tab">next</Key>
+	<Key mask="A" key="F4">close</Key>
+	<Key mask="A" key="#">desktop#</Key>
+	<Key mask="A" key="F1">root:1</Key>
+	<Key mask="A" key="F2">window</Key>
+	<Key mask="A" key="F10">maximize</Key>
+	<Key mask="A" key="Right">rdesktop</Key>
+	<Key mask="A" key="Left">ldesktop</Key>
+	<Key mask="A" key="Up">udesktop</Key>
+	<Key mask="A" key="Down">ddesktop</Key>
+
+</JWM>
+
+

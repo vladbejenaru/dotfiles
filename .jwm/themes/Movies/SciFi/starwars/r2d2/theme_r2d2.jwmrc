@@ -1,0 +1,170 @@
+     1	<?xml version="1.0"?>
+     2	
+     3	<JWM>
+     4	
+     5		<RootMenu height="15" onroot="123">
+     6	
+     7		<Program icon="xterm.png" label="Terminal">aterm</Program>
+     8		<Program icon="google-chrome-old.png" label="Chrome">google-chrome-stable</Program>
+     9		<Program icon="qupzilla.png" label="Midori">midori</Program>
+    10		<Program icon="chess.png" label="Chess">xboard</Program>
+    11		<Separator/>
+    12		<Include>/etc/jwm/debian-menu</Include>
+    13		<Separator/>
+    14		<Program icon="emblem-readonly.png" label="Lock">
+    15		xscreensaver-command -activate
+    16		</Program>
+    17		<Separator/>
+    18	
+    19		<Restart label="Restart" icon="system-restart.png"/>
+    20		<Exit label="Exit" confirm="true" icon="system-log-out.png"/>
+    21		<Program icon="system-shutdown.png" label="Shutdown">aterm -e sudo poweroff</Program>
+    22	
+    23		</RootMenu>
+    24	
+    25		<Tray  x="0" y="-1" height="32" autohide="false">
+    26	
+    27		<TrayButton label="Qemu">root:1</TrayButton>
+    28	
+    29		<TrayButton icon="gaupol.png">showdesktop</TrayButton>
+    30	
+    31		<Pager labeled="true"/>
+    32	
+    33		<TaskList maxwidth="256"/>
+    34	
+    35		<Dock/>
+    36		<TrayButton popup="Terminal" icon="aqemu.png">exec:aqemu</TrayButton>
+    37		<TrayButton popup="Terminal" icon="xterm.png">exec:aterm</TrayButton>
+    38		<TrayButton popup="Volume Control" icon="unity-tweak-tool.png">exec:pavucontrol</TrayButton>
+    39		<TrayButton popup="File Manager" icon="nemo.png">exec:/usr/bin/pcmanfm</TrayButton>
+    40		<TrayButton popup="Calculator" icon="applications-mathematics.png">exec:gnome-calculator</TrayButton>
+    41		<TrayButton popup="Leafpad" icon="leafpad.png">exec:leafpad</TrayButton>
+    42		<TrayButton popup="Midori Web Browser" icon="qupzilla.png">exec:midori</TrayButton>
+    43		<TrayButton popup="Sylpheed Email" icon="thunderbird.png">exec:sylpheed</TrayButton>
+    44		<TrayButton popup="Calendar Script" icon="web-google-calendar.png">exec:/home/user/scripts/xcal.sh</TrayButton>
+    45	
+    46		<Swallow name="xload" width="64">
+    47	        xload -nolabel -bg gray -fg blue -hl white
+    48		</Swallow>
+    49	
+    50		<Clock format="%H:%M">xclock</Clock>
+    51	
+    52		</Tray>
+    53	
+    54	   	<!-- Visual Styles -->
+    55	
+    56		<WindowStyle>
+    57	
+    58		<Font>sans:10</Font>
+    59		<Width>3</Width>
+    60		<Height>22</Height>     
+    61	
+    62	
+    63		<Active>
+    64		<Text>#ffffff</Text>
+    65		<Title>#2d3963:#96938e</Title>         
+    66		<Outline>#4b494a</Outline>
+    67		</Active>
+    68	
+    69	
+    70		<Inactive>
+    71		<Text>#fefdf9</Text>
+    72		<Title>#7f8bbb:#96938e</Title>         
+    73		<Outline>#4b494a</Outline>
+    74		</Inactive>
+    75	
+    76		</WindowStyle>
+    77	
+    78		<TaskListStyle>
+    79		<Font>sans:10</Font>
+    80		<ActiveForeground>#fefdf9</ActiveForeground>
+    81		<ActiveBackground>#2d3963:#96938e</ActiveBackground>
+    82		<Background>#2d3963:#96938e</Background>
+    83		</TaskListStyle>
+    84	
+    85		<TrayStyle>
+    86		<Font>sans:10</Font>
+    87		<Foreground>#fefdf9</Foreground>
+    88		<Background>#96938e</Background>
+    89		</TrayStyle>
+    90	
+    91		<PagerStyle>
+    92		<Outline>#777556</Outline>
+    93		<Foreground>#96938e</Foreground>
+    94		<Background>#4b494a</Background>
+    95		<ActiveForeground>#7f8bbb</ActiveForeground>
+    96		<ActiveBackground>#2d3963</ActiveBackground>
+    97		</PagerStyle>
+    98	
+    99		<MenuStyle>
+   100		<Font>sans:10</Font>
+   101		<Foreground>#fefdf9</Foreground>
+   102		<Background>#96938e</Background>
+   103		<ActiveForeground>#ffa3a6</ActiveForeground>
+   104		<ActiveBackground>#2d3963:#7f8bbb</ActiveBackground>
+   105		</MenuStyle>
+   106	
+   107		<PopupStyle>
+   108		<Font>sans:10</Font>
+   109		<Outline>#7f8bbb</Outline>
+   110		<Foreground>#2d3963</Foreground>
+   111		<Background>#96938e</Background>
+   112		</PopupStyle>
+   113	
+   114	<!--
+   115	2d3963 royal blue
+   116	7f8bbb light blue
+   117	96938e light gray
+   118	4b494a dark gray
+   119	fefdf9 almost white
+   120	ffa3a6 pink eye
+   121	-->
+   122	
+   123		<IconPath>
+   124		 /home/user/icons/jwm/moka
+   125		</IconPath>
+   126	
+   127		<Desktops width="2" height="2">
+   128		 <Background type="command">nitrogen --restore</Background>
+   129		</Desktops>
+   130	
+   131		<DoubleClickSpeed>400</DoubleClickSpeed>
+   132	
+   133		<DoubleClickDelta>2</DoubleClickDelta>
+   134	
+   135		<FocusModel>sloppy</FocusModel>
+   136	
+   137		<SnapMode distance="10">border</SnapMode>
+   138	
+   139		<MoveMode>opaque</MoveMode>
+   140	
+   141		<ResizeMode>opaque</ResizeMode>
+   142	
+   143		<StartupCommand>wicd-client</StartupCommand>
+   144		<StartupCommand>conky -d</StartupCommand>
+   145	
+   146		<Key key="Up">up</Key>
+   147		<Key key="Down">down</Key>
+   148		<Key key="Right">right</Key>
+   149		<Key key="Left">left</Key>
+   150		<Key key="h">left</Key>
+   151		<Key key="j">down</Key>
+   152		<Key key="k">up</Key>
+   153		<Key key="l">right</Key>
+   154		<Key key="Return">select</Key>
+   155		<Key key="Escape">escape</Key>
+   156	
+   157		<Key mask="A" key="Tab">next</Key>
+   158		<Key mask="A" key="F4">close</Key>
+   159		<Key mask="A" key="#">desktop#</Key>
+   160		<Key mask="A" key="F1">root:1</Key>
+   161		<Key mask="A" key="F2">window</Key>
+   162		<Key mask="A" key="F10">maximize</Key>
+   163		<Key mask="A" key="Right">rdesktop</Key>
+   164		<Key mask="A" key="Left">ldesktop</Key>
+   165		<Key mask="A" key="Up">udesktop</Key>
+   166		<Key mask="A" key="Down">ddesktop</Key>
+   167	
+   168	</JWM>
+   169	
+   170	

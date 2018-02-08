@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+
+<JWM>
+
+	<RootMenu height="15" onroot="123">
+
+	 <Program icon="xterm.png" label="Terminal">x-terminal-emulator</Program>
+	 <Program icon="google-chrome-old.png" label="Chrome">google-chrome-stable</Program>
+	 <Program icon="qupzilla.png" label="Midori">midori</Program>
+	 <Program icon="chess.png" label="Chess">xboard</Program>
+	 <Include>/etc/jwm/debian-menu</Include>
+
+	 <Separator/>
+	  <Program icon="emblem-readonly.png" label="Lock">
+	  xscreensaver-command -activate
+	  </Program>
+	 <Separator/>
+
+	 <Restart label="Restart" icon="system-restart.png"/>
+	 <Program icon="system-shutdown.png" label="Shutdown">sh /home/user/scripts/shutdown.sh</Program>
+	 <Exit label="Exit" confirm="true" icon="system-log-out.png"/>
+
+	</RootMenu>
+
+	<Tray  x="0" y="-1" height="32" autohide="false">
+
+	<TrayButton label="Qemu">root:1</TrayButton>
+
+	<TrayButton icon="gaupol.png">showdesktop</TrayButton>
+
+	<Pager labeled="true"/>
+
+	<TaskList maxwidth="256"/>
+
+	<Dock/>
+
+	<TrayButton popup="Terminal" icon="xterm.png">exec:x-terminal-emulator</TrayButton>
+	<TrayButton popup="Volume Control" icon="unity-tweak-tool.png">exec:pavucontrol</TrayButton>
+	<TrayButton popup="File Manager" icon="nemo.png">exec:/usr/bin/pcmanfm</TrayButton>
+	<TrayButton popup="Calculator" icon="applications-mathematics.png">exec:gcalctool</TrayButton>
+	<TrayButton popup="Leafpad" icon="leafpad.png">exec:leafpad</TrayButton>
+	<TrayButton popup="Midori Web Browser" icon="qupzilla.png">exec:midori</TrayButton>
+	<TrayButton popup="Sylpheed Email" icon="thunderbird.png">exec:sylpheed</TrayButton>
+	<TrayButton popup="Calendar Script" icon="web-google-calendar.png">exec:/home/user/scripts/xcal.sh</TrayButton>
+
+	<Swallow name="xload" width="64">
+        xload -nolabel -bg orange -fg red -hl goldenrod
+	</Swallow>
+
+	<Clock format="%H:%M">xclock</Clock>
+
+	</Tray>
+
+	<WindowStyle>
+
+	<Font>Sans-9</Font>
+	<Width>3</Width>
+	<Height>22</Height>     
+
+
+	<Active>
+	 <Text>orange red</Text>
+	 <Title>orange:yellow</Title>
+	 <Outline>goldenrod</Outline>
+	</Active>
+
+
+	<Inactive>
+	 <Text>orange red</Text>
+	 <Title>dark orange:orange</Title>         
+	 <Outline>goldenrod</Outline>
+	</Inactive>
+
+	</WindowStyle>
+
+	<TaskListStyle>
+	 <Font>Sans-9</Font>
+	 <ActiveForeground>red</ActiveForeground>
+	 <ActiveBackground>dark orange:goldenrod</ActiveBackground>
+	 <Background>goldenrod:orange</Background>
+	</TaskListStyle>
+
+	<TrayStyle>
+	 <Font>Sans-12</Font>
+	 <Foreground>orange red</Foreground>
+	 <Background>orange</Background>
+	</TrayStyle>
+
+	<PagerStyle>
+	 <Outline>goldenrod</Outline>
+	 <Foreground>gold</Foreground>
+	 <Background>goldenrod</Background>
+	 <ActiveForeground>orange</ActiveForeground>
+	 <ActiveBackground>gold</ActiveBackground>
+	</PagerStyle>
+
+	<MenuStyle>
+	 <Font>Sans-9</Font>
+	 <Foreground>orange red</Foreground>
+	 <Background>orange</Background>
+	 <ActiveForeground>red</ActiveForeground>
+	 <ActiveBackground>orange:yellow</ActiveBackground>
+	</MenuStyle>
+
+	<PopupStyle>
+	 <Font>Sans-9</Font>
+	 <Outline>goldenrod</Outline>
+	 <Foreground>orange red</Foreground>
+	 <Background>orange</Background>
+	</PopupStyle>
+
+	<IconPath>
+	 /home/user/icons/jwm/moka
+	</IconPath>
+
+	<Desktops width="4" height="1">
+	 <Background type="command">nitrogen --restore</Background>
+	</Desktops>
+
+	<DoubleClickSpeed>400</DoubleClickSpeed>
+
+	<DoubleClickDelta>2</DoubleClickDelta>
+
+	<FocusModel>sloppy</FocusModel>
+
+	<SnapMode distance="10">border</SnapMode>
+
+	<MoveMode>opaque</MoveMode>
+
+	<ResizeMode>opaque</ResizeMode>
+
+	<StartupCommand>xbattbar -I azure -O goldenrod -i orange -o goldenrod -p 10 -c -t 1 -a bottom</StartupCommand>
+	<StartupCommand>nm-applet</StartupCommand>
+
+	<Key key="Up">up</Key>
+	<Key key="Down">down</Key>
+	<Key key="Right">right</Key>
+	<Key key="Left">left</Key>
+	<Key key="h">left</Key>
+	<Key key="j">down</Key>
+	<Key key="k">up</Key>
+	<Key key="l">right</Key>
+	<Key key="Return">select</Key>
+	<Key key="Escape">escape</Key>
+
+	<Key mask="A" key="Tab">next</Key>
+	<Key mask="A" key="F4">close</Key>
+	<Key mask="A" key="#">desktop#</Key>
+	<Key mask="A" key="F1">root:1</Key>
+	<Key mask="A" key="F2">window</Key>
+	<Key mask="A" key="F10">maximize</Key>
+	<Key mask="A" key="Right">rdesktop</Key>
+	<Key mask="A" key="Left">ldesktop</Key>
+	<Key mask="A" key="Up">udesktop</Key>
+	<Key mask="A" key="Down">ddesktop</Key>
+
+</JWM>
+
+
