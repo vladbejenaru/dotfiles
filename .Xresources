@@ -7,6 +7,23 @@ Xft.autohint: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
+rofi.font: Ubuntu regular 10
+rofi.display-run:		     shell
+rofi.display-drun:		     app
+rofi.width:                          60
+rofi.lines:                          14
+rofi.terminal:             termite
+rofi.ssh-client:           ssh
+rofi.ssh-command:          {terminal} -e "{ssh-client} {host}"
+rofi.run-command:          {cmd}
+rofi.run-shell-command: {terminal} -e {cmd}
+rofi.color-window: argb:c82d303b, #7c8389, #1d1f21
+rofi.color-normal: argb:31d1f21, #c4cbd4, argb:96404552, #4084d6, #f9f9f9
+rofi.color-urgent: argb:2c1d1f21, #cc6666, argb:e54b5160, #a54242, #f9f9f9
+rofi.color-active: argb:2c1d1f21, #65acff, argb:e44b5160, #4491ed, #f9f9f9
+rofi.columns: 4
+!rofi.separator-style: solid
+rofi.hide-scrollbar: true
 
 UXTerm*faceName: Ubuntu Mono for Powerline:style=Regular
 XTerm*faceName: Ubuntu Mono for Powerline:style=Regular

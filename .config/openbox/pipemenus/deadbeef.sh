@@ -1,6 +1,27 @@
-#! /bin/bash
- 
-# DEADBEEF by Version Dependency
+#! /bin/bash 
+#
+# DEADBEEF by Derek Taylor (DistroTube)
+# A simple script that creates an openbox pipemenu that controls the deadbeef music player.
+#
+# This program is free software: you can redistribute it and/or modify it under the terms of
+# the GNU General Public License version 3 as published by the Free Software Foundation.
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program. If not, see: http://www.gnu.org/licenses
+#
+# Copy this file somewhere on your path and make it executable.
+# Add the following line somewhere to your /.config/openbox/menu.xml
+#       <menu execute="/PATH/TO/deadbeef.sh" id="Music Player" label="Music Player"/>
+# Be sure to change the PATH/TO to the correct path to this file.
+#
+# Reconfigure openbox.
+#
+# REQUIRES the Deadbeef music player to be installed on your computer.
+
+
 nowplaying=`deadbeef --nowplaying "%n %a - %t - %b - %y" | sed -n '1p' | tr -d '"'`
 tracktime=`deadbeef --nowplaying "%l" | sed -n '1p'`
 playlist_dir=`/home/derek/.config/deadbeef/playlists/`

@@ -10,52 +10,6 @@
 						</action>
 					</item>
 				</menu>
-				<menu id="root-menu-753414-475139-331956" label="Darkness">
-					<item label="Conky Darkness (Start)">
-						<action name="Execute">
-							<execute>/home/derek/.conky/conky_start_darkness</execute>
-						</action>
-					</item>
-					<item label="Darkness audio (Edit)">
-						<action name="Execute">
-							<execute>gedit /home/derek/.conky/Darkness/.conkyrc_audio</execute>
-						</action>
-					</item>
-					<item label="Darkness clock (Edit)">
-						<action name="Execute">
-							<execute>gedit /home/derek/.conky/Darkness/.conkyrc_clock</execute>
-						</action>
-					</item>
-					<item label="Darkness processes (Edit)">
-						<action name="Execute">
-							<execute>gedit /home/derek/.conky/Darkness/.conkyrc_processes</execute>
-						</action>
-					</item>
-					<item label="Darkness folders (Edit)">
-						<action name="Execute">
-							<execute>gedit /home/derek/.conky/Darkness/.conkyrc_folders</execute>
-						</action>
-					</item>
-					<item label="New Item">
-						<action name="Execute">
-							<execute>
-								command
-							</execute>
-						</action>
-					</item>
-				</menu>
-				<menu id="root-menu-753414-475139-761217" label="Harmattan Numix">
-					<item label="Conky Harmattan Numix (Start)">
-						<action name="Execute">
-							<execute>/home/derek/.conky/conky_start_harmattan_numix</execute>
-						</action>
-					</item>
-					<item label="Conky Harmattan Numix (Edit)">
-						<action name="Execute">
-							<execute>gedit /home/derek/.conky/Harmattan/.harmattan-themes/Numix/God-Mode/normal-mode/.conkyrc</execute>
-						</action>
-					</item>
-				</menu>
 				<menu id="root-menu-753414-475139-87203" label="Rings">
 					<item label="Conky Rings (Start)">
 						<action name="Execute">
@@ -68,15 +22,15 @@
 						</action>
 					</item>
 				</menu>
-				<menu id="root-menu-753414-475139-195435" label="Xartion">
+				<menu id="root-menu-753414-475139-195435" label="Electro">
 					<item label="Conky (start)">
 						<action name="Execute">
-							<execute>/home/derek/.conky/conky_start_xartion</execute>
+							<execute>/home/derek/.conky/conky_start_electro</execute>
 						</action>
 					</item>
-					<item label="Xartion Host (edit)">
+					<item label="Conkyrc (edit)">
 						<action name="Execute">
-							<execute>geany ~/.conky/Xartion/conkyrc_host</execute>
+							<execute>geany ~/.conky/electro/electro-1366.conkyrc</execute>
 						</action>
 					</item>
 				</menu>
@@ -91,13 +45,13 @@
 			<item label="Archive Manager">
 				<action name="Execute">
 					<command>
-<![CDATA[file-roller]]>																																																																																																																																																																																																																	
+<![CDATA[file-roller]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
 			<item label="Calculator">
 				<action name="Execute">
-					<execute>gnome-calculator</execute>
+					<execute>galculator</execute>
 				</action>
 			</item>
 			<item label="Character Map">
@@ -107,30 +61,16 @@
 					</execute>
 				</action>
 			</item>
-			<item label="Discord">
-				<action name="Execute">
-					<execute>discord</execute>
-				</action>
-			</item>
 			<item label="Font Viewer">
 				<action name="Execute">
 					<command>
-<![CDATA[gnome-font-viewer]]>																																																																																																																																																																																																																	
+<![CDATA[gnome-font-viewer]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
-			<item label="Gedit">
+			<item label="Leafpad">
 				<action name="Execute">
-					<execute>
-						gedit
-					</execute>
-				</action>
-			</item>
-			<item label="Onboard">
-				<action name="Execute">
-					<command>
-<![CDATA[onboard]]>																																																																																																																																																																																																																	
-					</command>
+					<execute>leafpad</execute>
 				</action>
 			</item>
 			<item label="ProRealTime">
@@ -138,18 +78,9 @@
 					<execute>java -jar '/home/derek/PRT_Launcher.jar'</execute>
 				</action>
 			</item>
-			<item label="Screen Reader">
-				<action name="Execute">
-					<command>
-<![CDATA[orca --replace]]>																																																																																																																																																																																																																	
-					</command>
-				</action>
-			</item>
 			<item label="Take Screenshot">
 				<action name="Execute">
-					<execute>
-						gnome-screenshot --interactive
-					</execute>
+					<execute>scrot</execute>
 				</action>
 			</item>
 			<item label="Terminal">
@@ -194,14 +125,14 @@
 			<item label="Mahjongg">
 				<action name="Execute">
 					<command>
-<![CDATA[gnome-mahjongg]]>																																																																																																																																																																																																																	
+<![CDATA[gnome-mahjongg]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
 			<item label="Mines">
 				<action name="Execute">
 					<command>
-<![CDATA[gnome-mines]]>																																																																																																																																																																																																																	
+<![CDATA[gnome-mines]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
@@ -234,13 +165,18 @@
 			<item label="ImageMagick (display)">
 				<action name="Execute">
 					<command>
-<![CDATA[/usr/bin/display.im6]]>																																																																																																																																																																																																																	
+<![CDATA[/usr/bin/display.im6]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
 			<item label="Image Viewer">
 				<action name="Execute">
-					<execute>eog %U</execute>
+					<execute>ristretto</execute>
+				</action>
+			</item>
+			<item label="Inkscape">
+				<action name="Execute">
+					<execute>inkscape</execute>
 				</action>
 			</item>
 			<item label="LibreOffice Drawing">
@@ -251,7 +187,7 @@
 			<item label="LRF Viewer">
 				<action name="Execute">
 					<command>
-<![CDATA[lrfviewer]]>																																																																																																																																																																																																																	
+<![CDATA[lrfviewer]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
@@ -276,19 +212,14 @@
 					<execute>termite -e 'canto-curses' -t 'Canto RSS Reader' </execute>
 				</action>
 			</item>
-			<item label="Chromium">
-				<action name="Execute">
-					<execute>chromium-browser %U</execute>
-				</action>
-			</item>
-			<item label="Corebird">
-				<action name="Execute">
-					<execute>corebird</execute>
-				</action>
-			</item>
 			<item label="Deluge">
 				<action name="Execute">
 					<execute>deluge</execute>
+				</action>
+			</item>
+			<item label="Discord">
+				<action name="Execute">
+					<execute>discord</execute>
 				</action>
 			</item>
 			<item label="Dropbox">
@@ -325,18 +256,6 @@
 					<execute>termite -e 'mutt' -t 'mutt email'</execute>
 				</action>
 			</item>
-			<item label="Remmina Remote Desktop">
-				<action name="Execute">
-					<command>
-<![CDATA[remmina]]>																																																																																																																																																																																																																	
-					</command>
-				</action>
-			</item>
-			<item label="Skype">
-				<action name="Execute">
-					<execute>skypeforlinux</execute>
-				</action>
-			</item>
 			<item label="TeamViewer">
 				<action name="Execute">
 					<execute>teamviewer</execute>
@@ -347,11 +266,6 @@
 					<execute>
 						thunderbird
 					</execute>
-				</action>
-			</item>
-			<item label="Vivaldi">
-				<action name="Execute">
-					<execute>vivaldi-beta</execute>
 				</action>
 			</item>
 		</menu>
@@ -381,56 +295,49 @@
 			<item label="Calibre">
 				<action name="Execute">
 					<command>
-<![CDATA[calibre]]>																																																																																																																																																																																																																	
+<![CDATA[calibre]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
-				</action>
-			</item>
-			<item label="Dictionary">
-				<action name="Execute">
-					<execute>
-						gnome-dictionary
-					</execute>
 				</action>
 			</item>
 			<item label="Document Viewer">
 				<action name="Execute">
 					<command>
-<![CDATA[evince]]>																																																																																																																																																																																																																	
+<![CDATA[evince]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Calc">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --calc]]>																																																																																																																																																																																																																	
+<![CDATA[libreoffice --calc]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Draw">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --draw]]>																																																																																																																																																																																																																	
+<![CDATA[libreoffice --draw]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Impress">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --impress]]>																																																																																																																																																																																																																	
+<![CDATA[libreoffice --impress]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Math">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --math]]>																																																																																																																																																																																																																	
+<![CDATA[libreoffice --math]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
 			<item label="LibreOffice Writer">
 				<action name="Execute">
 					<command>
-<![CDATA[libreoffice --writer]]>																																																																																																																																																																																																																	
+<![CDATA[libreoffice --writer]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
@@ -446,19 +353,9 @@
 					<execute>anoise</execute>
 				</action>
 			</item>
-			<item label="Cava">
+			<item label="Audacity">
 				<action name="Execute">
-					<execute>termite -e 'cava' -t 'cava audio visualizer'  </execute>
-				</action>
-			</item>
-			<item label="Cheese">
-				<action name="Execute">
-					<execute>cheese</execute>
-				</action>
-			</item>
-			<item label="Cmus">
-				<action name="Execute">
-					<execute>termite -e 'cmus' -t 'cmus music player' </execute>
+					<execute>audacity</execute>
 				</action>
 			</item>
 			<item label="Deadbeef">
@@ -466,28 +363,9 @@
 					<execute>deadbeef</execute>
 				</action>
 			</item>
-			<item label="Gespeaker">
-				<action name="Execute">
-					<command>
-<![CDATA[/usr/bin/gespeaker]]>																																																																																																																																																																																																																	
-					</command>
-				</action>
-			</item>
 			<item label="Guvcview">
 				<action name="Execute">
 					<execute>guvcview</execute>
-				</action>
-			</item>
-			<item label="Gmusicbrowser">
-				<action name="Execute">
-					<command>
-<![CDATA[gmusicbrowser]]>																																																																																																																																																																																																																	
-					</command>
-				</action>
-			</item>
-			<item label="Ncmpcpp">
-				<action name="Execute">
-					<execute>termite -e 'ncmpcpp' -t 'ncmpcpp music player'</execute>
 				</action>
 			</item>
 			<item label="K3b Burner">
@@ -497,9 +375,19 @@
 					</execute>
 				</action>
 			</item>
-			<item label="Openshot">
+			<item label="Kdenlive">
 				<action name="Execute">
-					<execute>openshot</execute>
+					<execute>kdenlive</execute>
+				</action>
+			</item>
+			<item label="Open Broadcaster Software">
+				<action name="Execute">
+					<execute>obs</execute>
+				</action>
+			</item>
+			<item label="Pulse Audio Volume Control">
+				<action name="Execute">
+					<execute>pavucontrol</execute>
 				</action>
 			</item>
 			<item label="Pithos">
@@ -507,26 +395,9 @@
 					<execute>pithos</execute>
 				</action>
 			</item>
-			<item label="Pitivi">
-				<action name="Execute">
-					<execute>pitivi</execute>
-				</action>
-			</item>
-			<item label="Rhythmbox">
-				<action name="Execute">
-					<execute>
-						rhythmbox
-					</execute>
-				</action>
-			</item>
 			<item label="Simple Screen Recorder">
 				<action name="Execute">
 					<execute>simplescreenrecorder</execute>
-				</action>
-			</item>
-			<item label="Totem Movie Player">
-				<action name="Execute">
-					<execute>totem</execute>
 				</action>
 			</item>
 			<item label="VLC">
@@ -611,11 +482,112 @@
 		<menu id="client-list-menu"/>
 		<menu execute="~/.config/openbox/pipemenus/obrecent.sh" id="recent" label="Recent Files"/>
 		<separator/>
+		<menu id="root-menu-454721" label="Administration">
+			<menu id="root-menu-454721-901149" label="System Monitoring">
+				<item label="Glances">
+					<action name="Execute">
+						<execute>termite -e 'glances' -t 'glances'</execute>
+					</action>
+				</item>
+				<item label="Htop">
+					<action name="Execute">
+						<execute>termite -e 'htop' -t 'htop'</execute>
+					</action>
+				</item>
+				<item label="Nmon">
+					<action name="Execute">
+						<execute>termite -e 'nmon' -t 'nmon'</execute>
+					</action>
+				</item>
+				<item label="Stacer">
+					<action name="Execute">
+						<execute>stacer</execute>
+					</action>
+				</item>
+				<item label="Stress Terminal UI">
+					<action name="Execute">
+						<execute>termite -e 's-tui' -t 'Stress Terminal UI'</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Network Connections">
+				<action name="Execute">
+					<command>
+<![CDATA[nm-connection-editor]]>																																																																																																																																																																																																																																																																																																																																															
+					</command>
+				</action>
+			</item>
+			<item label="Nvidia Settings">
+				<action name="Execute">
+					<execute>/usr/bin/nvidia-settings</execute>
+				</action>
+			</item>
+			<item label="Octopi">
+				<action name="Execute">
+					<execute>gksu octopi</execute>
+				</action>
+			</item>
+			<item label="Openbox Config">
+				<action name="Execute">
+					<execute>
+						obconf
+					</execute>
+				</action>
+			</item>
+			<item label="Openbox Menu">
+				<action name="Execute">
+					<execute>
+						obmenu
+					</execute>
+				</action>
+			</item>
+			<item label="Printing">
+				<action name="Execute">
+					<execute>
+						system-config-printer
+					</execute>
+				</action>
+			</item>
+			<item label="Ranger">
+				<action name="Execute">
+					<execute>termite -e 'ranger' -t 'ranger file manager'</execute>
+				</action>
+			</item>
+			<item label="Startup Disk Creator">
+				<action name="Execute">
+					<execute>
+						usb-creator-gtk
+					</execute>
+				</action>
+			</item>
+			<item label="SUSE Studio Imagewriter">
+				<action name="Execute">
+					<execute>imagewriter %f</execute>
+				</action>
+			</item>
+			<item label="Timeshift">
+				<action name="Execute">
+					<execute>gksu timeshift-launcher</execute>
+				</action>
+			</item>
+			<item label="Xdiagnose">
+				<action name="Execute">
+					<execute>gksu pkexec xdiagnose</execute>
+				</action>
+			</item>
+			<item label="Users and Groups">
+				<action name="Execute">
+					<execute>
+						users-admin
+					</execute>
+				</action>
+			</item>
+		</menu>
 		<menu id="root-menu-604715" label="Preferences">
 			<item label="Activity Log Manager">
 				<action name="Execute">
 					<command>
-<![CDATA[activity-log-manager]]>																																																																																																																																																																																																																	
+<![CDATA[activity-log-manager]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
@@ -629,13 +601,8 @@
 			<item label="Backups">
 				<action name="Execute">
 					<command>
-<![CDATA[deja-dup-preferences]]>																																																																																																																																																																																																																	
+<![CDATA[deja-dup-preferences]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
-				</action>
-			</item>
-			<item label="Colortest Script">
-				<action name="Execute">
-					<execute>termite -e '/home/derek/scripts/colors/colortest.sh' -t 'colortest.sh'</execute>
 				</action>
 			</item>
 			<item label="Disk Usage Analyzer">
@@ -648,7 +615,7 @@
 			<item label="Disks Utility">
 				<action name="Execute">
 					<command>
-<![CDATA[gnome-disks]]>																																																																																																																																																																																																																	
+<![CDATA[gnome-disks]]>																																																																																																																																																																																																																																																																																																																																															
 					</command>
 				</action>
 			</item>
@@ -678,9 +645,7 @@
 			</item>
 			<item label="Nitrogen Wallpaper">
 				<action name="Execute">
-					<execute>
-						nitrogen ~/Documents/Backgrounds/
-					</execute>
+					<execute>nitrogen</execute>
 				</action>
 			</item>
 			<item label="Passwords and Keys">
@@ -702,147 +667,14 @@
 					</execute>
 				</action>
 			</item>
+			<item label="Rofi Theme Selector">
+				<action name="Execute">
+					<execute>rofi-theme-selector</execute>
+				</action>
+			</item>
 			<item label="Screensaver">
 				<action name="Execute">
 					<execute>xscreensaver-demo</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="root-menu-454721" label="Administration">
-			<item label="Disks">
-				<action name="Execute">
-					<execute>gnome-disks</execute>
-				</action>
-			</item>
-			<item label="GDebi Package Installer">
-				<action name="Execute">
-					<command>
-<![CDATA[gdebi-gtk]]>																																																																																																																																																																																																																	
-					</command>
-				</action>
-			</item>
-			<item label="Glances">
-				<action name="Execute">
-					<execute>termite -e 'glances' -t 'glances'</execute>
-				</action>
-			</item>
-			<item label="Htop">
-				<action name="Execute">
-					<execute>termite -e 'htop' -t 'htop'</execute>
-				</action>
-			</item>
-			<item label="Language Support">
-				<action name="Execute">
-					<execute>
-						/usr/bin/gnome-language-selector
-					</execute>
-				</action>
-			</item>
-			<item label="Log File Viewer">
-				<action name="Execute">
-					<execute>
-						gnome-system-log
-					</execute>
-				</action>
-			</item>
-			<item label="Network Connections">
-				<action name="Execute">
-					<command>
-<![CDATA[nm-connection-editor]]>																																																																																																																																																																																																																	
-					</command>
-				</action>
-			</item>
-			<item label="Nmon">
-				<action name="Execute">
-					<execute>termite -e 'nmon' -t 'nmon'</execute>
-				</action>
-			</item>
-			<item label="Nvidia Settings">
-				<action name="Execute">
-					<execute>/usr/bin/nvidia-settings</execute>
-				</action>
-			</item>
-			<item label="Openbox Config">
-				<action name="Execute">
-					<execute>
-						obconf
-					</execute>
-				</action>
-			</item>
-			<item label="Openbox Menu">
-				<action name="Execute">
-					<execute>
-						obmenu
-					</execute>
-				</action>
-			</item>
-			<item label="Printing">
-				<action name="Execute">
-					<execute>
-						system-config-printer
-					</execute>
-				</action>
-			</item>
-			<item label="Ranger">
-				<action name="Execute">
-					<execute>termite -e 'ranger' -t 'ranger file manager'</execute>
-				</action>
-			</item>
-			<item label="Ubuntu Software Center">
-				<action name="Execute">
-					<execute>gksu software-center</execute>
-				</action>
-			</item>
-			<item label="Software Sources">
-				<action name="Execute">
-					<execute>
-						gksu --desktop /usr/share/applications/software-properties-gtk.desktop /usr/bin/software-properties-gtk
-					</execute>
-				</action>
-			</item>
-			<item label="Startup Disk Creator">
-				<action name="Execute">
-					<execute>
-						usb-creator-gtk
-					</execute>
-				</action>
-			</item>
-			<item label="Stress Terminal UI">
-				<action name="Execute">
-					<execute>termite -e 's-tui' -t 'Stress Terminal UI' </execute>
-				</action>
-			</item>
-			<item label="Synaptic Package Manager">
-				<action name="Execute">
-					<execute>
-						gksu --description /usr/share/applications/synaptic.desktop /usr/sbin/synaptic
-					</execute>
-				</action>
-			</item>
-			<item label="System Monitor">
-				<action name="Execute">
-					<execute>
-						gnome-system-monitor
-					</execute>
-				</action>
-			</item>
-			<item label="Update Manager">
-				<action name="Execute">
-					<execute>
-						gksu /usr/bin/update-manager
-					</execute>
-				</action>
-			</item>
-			<item label="Xdiagnose">
-				<action name="Execute">
-					<execute>gksu pkexec xdiagnose</execute>
-				</action>
-			</item>
-			<item label="Users and Groups">
-				<action name="Execute">
-					<execute>
-						users-admin
-					</execute>
 				</action>
 			</item>
 		</menu>
@@ -894,15 +726,16 @@
 			</item>
 		</menu>
 		<separator/>
-		<menu execute="~/.config/openbox/pipemenus/gmusicbrowser.py" id="Music Player" label="Music Player"/>
+		<menu execute="~/.config/openbox/pipemenus/deadbeef.sh" id="Music Player" label="Music Player"/>
 		<separator/>
-		<menu execute="~/.config/openbox/pipemenus/date-menu.py" id="datetime" label="Time and Date"/>
+		<menu execute="~/.config/openbox/pipemenus/shell-color-scripts.sh" id="shell-color-scripts" label="Color Scripts"/>
 		<menu execute="~/.config/openbox/pipemenus/sysinfo.py" id="sysinfo" label="System Info"/>
+		<menu execute="~/.config/openbox/pipemenus/date-menu.py" id="datetime" label="Time and Date"/>
 		<menu execute="~/.config/openbox/pipemenus/virtualbox.sh" id="virtualbox" label="VirtualBox"/>
 		<separator/>
-		<item label="dmenu">
+		<item label="Rofi">
 			<action name="Execute">
-				<execute>dmenu_run -nb '#111111' -nf '#cccccc' -sb '#111111' -sf '#82C742' -p 'SEARCH ::' -fn '-*-terminus-medium-r-*-*-13-*-*-*-*-*-*-*' -i -b</execute>
+				<execute>rofi -show drun</execute>
 			</action>
 		</item>
 		<item label="Terminal">

@@ -1,13 +1,33 @@
 #!/usr/bin/env python3
 #
-# GMUISCBROWSER written by Version Dependency
+# GMUISCBROWSER by Derek Taylor (DistroTube)
+# A simple script that creates an openbox pipemenu that controls gmusicbrowser.
+# 
+# This program is free software: you can redistribute it and/or modify it under the terms of
+# the GNU General Public License version 3 as published by the Free Software Foundation.
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program. If not, see: http://www.gnu.org/licenses
+#
+# Copy this file somewhere on your path and make it executable.
+# Add the following line somewhere to your /.config/openbox/menu.xml
+#       <menu execute="/PATH/TO/gmusicbrowser.sh" id="gmusicbrowser" label="gmusicbrowser"/>
+# Be sure to change the PATH/TO to the correct path to this file.
+#
+# Reconfigure openbox.
+#
+# REQUIRES the gmusicbrowser music player to be installed on your computer.
+
 # The playlist submenu is designed to pull all .m3u files from the ~home/$USER/.config/gmusicbrowser/ directory.
 # Therefore, you must create this folder and export your playlists to this folder.
 # To enable song information to display, you must enable the NOW PLAYHING plugin in gmusicbrowser.
 # Add this to "command for when playing song changed": tee /home/$USER/.config/gmusicbrowser/nowplaying.info
 # Change $USER to your actual username. Tick the checkbox for send title/artist/album in standard input.
 # You also should go to Preferences > Misc. and tick the checkbox for remember playing position between sessions.
-# This allows gmusicbrowser to remember the song  it was playing within the playlist upon exit.
+# This allows gmusicbrowser to remember the song it was playing within the playlist upon exit.
 
 # SETTING
 

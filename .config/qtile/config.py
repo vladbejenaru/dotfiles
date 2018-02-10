@@ -274,6 +274,9 @@ def init_layout_theme():
             "border_focus": "60C307",
             "border_normal": "000000"
 		    }
+		    
+def init_border_args():
+    return {"border_width": 2}
 
 def init_layouts():
     return [layout.Max(**layout_theme),
@@ -295,6 +298,9 @@ def init_layouts():
                 section_top = 10,
                 **layout_theme
                 ),
+            layout.Slice(side="left", width=192, name="gimp", role="gimp-toolbox",
+                fallback=layout.Slice(side="right", width=256, role="gimp-dock",
+                fallback=layout.Stack(num_stacks=1, **border_args))),
             layout.Floating(**layout_theme)]
             #layout.Matrix(**layout_theme),
             #layout.Zoomy(**layout_theme),
@@ -457,6 +463,7 @@ if __name__ in ["config", "__main__"]:
     groups = init_groups()
     floating_layout = init_floating_layout()
     layout_theme = init_layout_theme()
+    border_args = init_border_args()
     layouts = init_layouts()
     screens = init_screens()
     widget_defaults = init_widgets_defaults()

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 #
-# SYSTEMINFO written by Version Dependency
+# SYSTEMINFO by Derek Taylor (DistroTube)
+# A simple script that creates an openbox pipemenu that displays system information.
 # My root partition is on /dev/sda1 and my swap is /dev/sda5.  Edit these is your partitioning is different.
 #
 # This program is free software: you can redistribute it and/or modify it under the terms of
@@ -11,6 +12,15 @@
 #
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see: http://www.gnu.org/licenses
+#
+# Copy this file somewhere on your path and make it executable.
+# Add the following line somewhere to your /.config/openbox/menu.xml
+#       <menu execute="/PATH/TO/sysinfo.py" id="sysinfo" label="System Info"/>
+# Be sure to change the PATH/TO to the correct path to this file.
+#
+# Reconfigure openbox.
+#
+# REQUIRES net-tools (for ifconfig) to be installed on your computer.
 
 # SETTINGS
  
@@ -120,15 +130,15 @@ swapUsedPercent = process.communicate()[0].decode("utf-8").rstrip()
 
 # SETTINGS - NET
 
-net1 = "/sbin/ifconfig 'eth0' | grep 'inet addr:' | sed 's/.*inet addr://' | sed 's/Bcast.*//'"
+net1 = "/sbin/ifconfig 'enp3s0' | grep 'inet ' | sed 's/.*inet //' | sed 's/netmask.*//'"
 process = subprocess.Popen(net1, stdout=subprocess.PIPE, shell=True)
 netIP = process.communicate()[0].decode("utf-8").rstrip()
 
-net2 = "/sbin/ifconfig 'eth0' | grep bytes | sed 's/.*RX bytes:[0-9]* (//'  | sed 's/iB).*TX.*//' | sed 's/b).*TX.*//' | sed 's/).*TX.*//'"
+net2 = "/sbin/ifconfig 'enp3s0' | grep 'RX packets' | sed 's/.*bytes [0-9]* (//'  | sed 's/iB).*)*//' | sed 's/b).*)*//' | sed 's/).*)*//'"
 process = subprocess.Popen(net2, stdout=subprocess.PIPE, shell=True)
 netDown = process.communicate()[0].decode("utf-8").rstrip()
 
-net3 = "/sbin/ifconfig 'eth0' | grep bytes | sed 's/.*TX bytes:[0-9]* (//' | sed 's/iB)//' |sed 's/b).*//' | sed 's/).*//'"
+net3 = "/sbin/ifconfig 'enp3s0' | grep 'TX packets' | sed 's/.*bytes [0-9]* (//'  | sed 's/iB).*)*//' | sed 's/b).*)*//' | sed 's/).*)*//'"
 process = subprocess.Popen(net3, stdout=subprocess.PIPE, shell=True)
 netUp = process.communicate()[0].decode("utf-8").rstrip()
 
@@ -162,6 +172,6 @@ print ('<separator />')
 print ('<item label="NET" />')
 print ('<separator />')
 print ('<item label="'+'NET IP: '+netIP+'"/>')
-print ('<item label="'+'NET DOWN: '+netDown+'"/>')
-print ('<item label="'+'NET UP: '+netUp+'"/>')
+print ('<item label="'+'RX bytes: '+netDown+'"/>')
+print ('<item label="'+'TX bytes: '+netUp+'"/>')
 print ('</openbox_pipe_menu>')

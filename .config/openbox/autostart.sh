@@ -1,4 +1,5 @@
-compton --config ~/.config/compton/compton.conf & # --shadow-exclude 'n:a:Conky' -b &
+# compton --config ~/.config/compton/compton.conf & # --shadow-exclude 'n:a:Conky' -b &
+compton &
 xscreensaver -nosplash &
 nitrogen --restore &
 
