@@ -30,11 +30,11 @@
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Mouse</monitor>
+    <monitor>Primary</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
-    <primaryMonitor>Active</primaryMonitor>
+    <primaryMonitor>1</primaryMonitor>
     <!-- The monitor where Openbox should place popup dialogs such as the
        focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
@@ -54,31 +54,31 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>no</keepBorder>
-    <animateIconify>no</animateIconify>
+    <keepBorder>yes</keepBorder>
+    <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Droid Sans</name>
+      <name>sans</name>
       <size>8</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>Normal</slant>
+      <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Droid Sans</name>
+      <name>sans</name>
       <size>8</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>Normal</slant>
+      <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Ubuntu</name>
-      <size>9</size>
+      <name>Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>Normal</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
@@ -93,21 +93,21 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Ubuntu</name>
-      <size>10</size>
+      <name>sans</name>
+      <size>9</size>
       <!-- font size in points -->
-      <weight>Normal</weight>
+      <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>Normal</slant>
+      <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Ubuntu</name>
-      <size>10</size>
+      <name>sans</name>
+      <size>9</size>
       <!-- font size in points -->
-      <weight>Normal</weight>
+      <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>Normal</slant>
+      <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
@@ -123,11 +123,10 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>I</name>
-      <name>II</name>
-      <name>III</name>
-      <name>IV</name>
-      <name>(Unnamed desktop)</name>
+      <!-- set names up here if you want to, like this:
+    <name>desktop 1</name>
+    <name>desktop 2</name>
+    -->
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -251,8 +250,231 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
+    <!-- Tiling Windows -->
+    <keybind key="W-A-KP_7">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-KP_8">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>25%</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-KP_9">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-KP_4">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>25%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-KP_6">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>25%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-KP_1">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-KP_2">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>25%</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-KP_3">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-KP_5">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>95%</width>
+        <height>95%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_7">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0%</x>
+        <y>0%</y>
+        <width>33%</width>
+        <height>33%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_8">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>33%</x>
+        <y>0%</y>
+        <width>34%</width>
+        <height>33%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_9">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>67%</x>
+        <y>0%</y>
+        <width>33%</width>
+        <height>33%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_4">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0%</x>
+        <y>33%</y>
+        <width>33%</width>
+        <height>34%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_5">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>33%</x>
+        <y>33%</y>
+        <width>34%</width>
+        <height>34%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_6">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>67%</x>
+        <y>33%</y>
+        <width>33%</width>
+        <height>34%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_1">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0%</x>
+        <y>67%</y>
+        <width>33%</width>
+        <height>33%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_2">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>33%</x>
+        <y>67%</y>
+        <width>34%</width>
+        <height>33%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_3">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>67%</x>
+        <y>67%</y>
+        <width>33%</width>
+        <height>33%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="GrowToEdgeEast"/>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="GrowToEdgeWest"/>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="GrowToEdgeSouth"/>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="UnmaximizeFull"/>
+      <action name="GrowToEdgeNorth"/>
+    </keybind>
+    <keybind key="W-A-Up">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeHorizontal"/>
+      <action name="MoveResizeTo">
+        <width>100%</width>
+        <height>50%</height>
+        <x>0</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-A-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeHorizontal"/>
+      <action name="MoveResizeTo">
+        <width>100%</width>
+        <height>50%</height>
+        <x>0</x>
+        <y>-0</y>
+      </action>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <x>0</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <x>-0</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="A-r">
+      <action name="Resize"/>
+    </keybind>
+    <keybind key="A-m">
+      <action name="Move"/>
+    </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="A-F4">
+    <keybind key="S-W-c">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -265,11 +487,17 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <!-- Take a screenshot of the current window with gnome-screenshot when Alt+Print are pressed -->
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>gnome-screenshot -w</command>
-      </action>
+    <keybind key="S-W-b">
+      <action name="ToggleDecorations"/>
+    </keybind>
+    <keybind key="S-W-Return">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+    <keybind key="A-Down">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="A-Up">
+      <action name="ToggleMaximize"/>
     </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
@@ -322,56 +550,85 @@
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for running applications -->
-    <keybind key="C-A-t">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>terminal</name>
-        </startupnotify>
-        <command>termite -t terminal</command>
-      </action>
-    </keybind>
+    <!-- Keybindings for launching terminal -->
     <keybind key="W-Return">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>rofi</name>
+          <name>Termite</name>
         </startupnotify>
-        <command>rofi -combi-modi window,drun -show drun</command>
+        <command>termite</command>
       </action>
     </keybind>
-    <keybind key="W-1">
+    <!-- Keybindings for running applications -->
+    <keybind key="W-space">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
+    <keybind key="W-r">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>pcmanfm</name>
+          <name>Rofi</name>
         </startupnotify>
-        <command>pcmanfm</command>
+        <command>rofi -show run</command>
       </action>
     </keybind>
-    <keybind key="W-2">
+    <!-- Keybindings for important applications -->
+    <keybind key="W-w">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>firefox</name>
+          <name>Firefox</name>
         </startupnotify>
         <command>firefox</command>
       </action>
     </keybind>
-    <keybind key="W-3">
+    <keybind key="W-f">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>thunderbird</name>
+          <name>PCManFM</name>
         </startupnotify>
-        <command>thunderbird</command>
+        <command>pcmanfm</command>
       </action>
     </keybind>
-    <!-- Launch gnome-screenshot when Print is pressed -->
-    <keybind key="Print">
+    <keybind key="S-W-k">
       <action name="Execute">
-        <command>gnome-screenshot</command>
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>xkill</name>
+        </startupnotify>
+        <command>xkill</command>
+      </action>
+    </keybind>
+    <keybind key="W-v">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>pavucontrol</name>
+        </startupnotify>
+        <command>pavucontrol</command>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>i3lock</name>
+        </startupnotify>
+        <command>i3lock -c 48D884</command>
+      </action>
+    </keybind>
+    <!-- Keybindings for exiting out of Openbox -->
+    <keybind key="S-W-q">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Oblogout</name>
+        </startupnotify>
+        <command>oblogout</command>
       </action>
     </keybind>
   </keyboard>
@@ -713,8 +970,6 @@
     <!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
-    <!-- system menu files on Debian systems -->
-    <file>/var/lib/openbox/debian-menu.xml</file>
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
     <!-- if a press-release lasts longer than this setting (in milliseconds), the
