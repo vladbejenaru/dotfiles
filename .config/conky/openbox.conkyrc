@@ -24,7 +24,7 @@ draw_outline no
 default_outline_color 000000
 
 color2 ededed
-color3 43B261
+color3 109567
 cpu_avg_samples  2
 default_color bbbbbb
 
@@ -44,7 +44,7 @@ update_interval 1
 
 
 TEXT
-${voffset 8}$color${font Cantarell:size=16}${time %A}$font${voffset -8}$alignr${color 43B261}${font Cantarell:size=38}${time %e}$font
+${voffset 8}$color${font Cantarell:size=16}${time %A}$font${voffset -8}$alignr${color 109567}${font Cantarell:size=38}${time %e}$font
 $color${voffset -30}$color${font Cantarell:size=18}${time %B}$font${voffset -3} $color${font Cantarell:size=20}${time %Y}$font
 #${voffset 10}$alignr$color Kraków (PL) ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EPKK temperature temperature 15}°C
 #
